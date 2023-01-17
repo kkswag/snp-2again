@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+      integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Follow Symtom</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="left">
+          <div class="logo">
+            <img src="./src/img/logo.png" alt="" />
+          </div>
+
+          <div class="menu">
+            <a href="./home.html">หน้าหลัก</a>
+            <a href="./exerTime.html">ออกกำลังกาย</a>
+            <a href="./follow.html">ติดตามอาการ</a>
+            <a href="./total.html">สรุปผล</a>
+          </div>
+        </div>
+
+        <div class="username">
+          <a href="./login.html"><p>ละมุด</p></a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="total">
+        <div class="headtotal">
+          <h1>สรุปผล</h1>
+        </div>
+        <div id="wrap">
+          <div class="cropcalendar">
+            <div class="calendar">
+              <div class="month">
+                <a href="#" class="nav"><i class="fas fa-angle-left"></i></a>
+                <div>january <span class="year">2023</span></div>
+                <a href="#" class="nav"><i class="fas fa-angle-right"></i></a>
+              </div>
+              <div class="days">
+                <span>M</span>
+                <span>T</span>
+                <span>W</span>
+                <span>T</span>
+                <span>F</span>
+                <span>S</span>
+                <span>S</span>
+              </div>
+              <div class="dates">
+                <button>
+                  <time>1</time>
+                </button>
+                <button>
+                  <time>2</time>
+                </button>
+                <button>
+                  <time>3</time>
+                </button>
+                <button class="today2">
+                  <time>4</time>
+                </button>
+                <button class="today2">
+                  <time>5</time>
+                </button>
+                <button>
+                  <time>6</time>
+                </button>
+                <button class="today2">
+                  <time>7</time>
+                </button>
+                <button>
+                  <time>8</time>
+                </button>
+                <button>
+                  <time>9</time>
+                </button>
+                <button>
+                  <time>10</time>
+                </button>
+                <button>
+                  <time>11</time>
+                </button>
+                <button>
+                  <time>12</time>
+                </button>
+                <button>
+                  <time>13</time>
+                </button>
+                <button>
+                  <time>14</time>
+                </button>
+                <button>
+                  <time>15</time>
+                </button>
+                <button>
+                  <time>16</time>
+                </button>
+                <button>
+                  <time>17</time>
+                </button>
+                <button>
+                  <time>18</time>
+                </button>
+                <button>
+                  <time>19</time>
+                </button>
+                <button>
+                  <time>20</time>
+                </button>
+                <button>
+                  <time>21</time>
+                </button>
+                <button>
+                  <time>22</time>
+                </button>
+                <button>
+                  <time>23</time>
+                </button>
+                <button>
+                  <time>24</time>
+                </button>
+                <button>
+                  <time>25</time>
+                </button>
+                <button>
+                  <time>26</time>
+                </button>
+                <button>
+                  <time>27</time>
+                </button>
+                <button>
+                  <time>28</time>
+                </button>
+                <button>
+                  <time>29</time>
+                </button>
+                <button>
+                  <time>30</time>
+                </button>
+                <button>
+                  <time>31</time>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="wrap">
+        <div class="cropButtonMD">
+          <div class="dropdownMonth">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Month</option>
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </div>
+
+          <div class="dropdownDay">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="wrap">
+        <div class="croptotalGraf">
+          <div class="grafHead">
+            <p>สรุปผลอาการโดยรวม</p>
+          </div>
+          <style>
+            body,
+            html {
+              background: #f1f1f1;
+              /* padding-top: 50px; */
+            }
+
+            .wrapper {
+              width: 60%;
+              display: block;
+              overflow: hidden;
+              margin: 0 auto;
+              padding: 60px 50px;
+              background: #b5a3c3;
+              border-radius: 50px;
+            }
+
+            canvas {
+              background: #b5a3c3;
+            }
+
+            a {
+              margin-top: 50px;
+              display: block;
+              text-decoration: none;
+              color: #823051;
+              font-weight: bold;
+              text-align: center;
+            }
+          </style>
+
+          <body>
+            <div class="wrapper">
+              <canvas id="myChart"></canvas>
+            </div>
+          </body>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="logoFooter">
+        <img src="./src/img/logo.png" alt="" />
+      </div>
+      <div class="ads">
+        <p>2022 SNP .All Rights Reswrved</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+
+      var myChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["4", "5", "6", "7", "8", "9", "10"],
+          datasets: [
+            {
+              label: "Data",
+              borderColor: "#823051",
+              pointBorderColor: "#823051",
+              pointBackgroundColor: "#823051",
+              pointHoverBackgroundColor: "#823051",
+              pointHoverBorderColor: "#823051",
+              pointBorderWidth: 10,
+              pointHoverRadius: 10,
+              pointHoverBorderWidth: 1,
+              pointRadius: 3,
+              fill: false,
+              borderWidth: 4,
+              data: [80, 120, 150, 170, 170, 170, 170],
+            },
+          ],
+        },
+        options: {
+          legend: {
+            position: "bottom",
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                  beginAtZero: true,
+                  maxTicksLimit: 5,
+                  padding: 20,
+                },
+                gridLines: {
+                  drawTicks: false,
+                  display: false,
+                },
+              },
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  zeroLineColor: "transparent",
+                },
+                ticks: {
+                  padding: 20,
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

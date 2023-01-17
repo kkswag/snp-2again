@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+          integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+        <link rel="stylesheet" href="./src/style.css">
+        <title>register</title>
+</head>
+<body>
+    <div class="regisPart">
+        <div class="background"></div>
+        <div class="regis">
+          <!-- <h1><i class="fa-solid fa-chevron-left"></i> <span>WELLCOME</span></h1> -->
+          <a href="./login.html"
+            ><i class="fa-solid fa-chevron-left"></i> <span>Register</span></a
+          >
+  
+          <div class="regisForm">
+            <div class="userPart">
+              <p>USERNAME</p>
+              <input type="text" name="username" id="un" />
+            </div>
+  
+            <div class="passwordPart">
+              <p>E-MAIL</p>
+              <input type="email" name="email" id="em" />
+            </div>
+  
+            <div class="passwordPart">
+              <p>PASSWORD</p>
+              <input type="password" name="password" id="pw" />
+            </div>
+          </div>
+  
+          <!-- <div class="gender">
+            <p>GENDER</p>
+  
+            <div class="formGender">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  MALE
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  FEMALE
+                </label>
+              </div>
+            </div>
+          </div> -->
+  
+          <a><button class="btLogin">Submit</button></a>
+        </div>
+      </div>
+</body>
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin=" anonymous "
+    referrerpolicy="no-referrer "
+  ></script>
+
+  <script>
+    var username = document.getElementById("un").value;
+    var email = document.getElementById("em").value;
+    var password = document.getElementById("pw").value;
+
+    $(".btLogin").click(function () {
+      var username = $("#un").val();
+      var email = $("#em").val();
+      var password = $("#pw").val();
+      console.log("Username:", $("#un").val());
+      console.log("Email:", $("#em").val());
+      console.log("Password:", $("#pw").val());
+      $.ajax({
+        method: "POST",
+        url: "http://localhost:428/test/validate.php",
+        data: {
+          username: username,
+          email: email,
+          password: password,
+        },
+        success: function (response) {
+          console.log(response);
+          if (response == "User_is_null") {
+            alert("user is null");
+            window.location = "./register.html";
+          } else if (response == "Email_is_null") {
+            alert("Email is null");
+            window.location = "./register.html";
+          } else if (response == "Password_is_null") {
+            alert("Password is null");
+            window.location = "./register.html";
+          } else {
+            alert("Register_success");
+            window.location = "./login.html";
+          }
+        },
+      });
+    });
+  </script>
+</html>

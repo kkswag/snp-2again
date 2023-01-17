@@ -1,0 +1,86 @@
+<!-- Copyright 2021 Google LLC. All Rights Reserved.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+==============================================================================-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.c61ab535.css">
+    <title>Exercise Page</title>
+    <style>body {
+        margin: 0;
+      }
+      #stats {
+        position: relative;
+        width: 100%;
+        height: 80px;
+      }
+      #main {
+        position: relative;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      #canvas-wrapper,
+      #scatter-gl-container {
+        position: relative;
+      }</style>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="left">
+          <div class="logo">
+            <img src="/logo.a0487e91.png" alt="">
+          </div>
+
+          <div class="menu">
+            <a href="/home.html">หน้าหลัก</a>
+            <a href="/exerTime.html">ออกกำลังกาย</a>
+            <a href="/follow.html">ติดตามอาการ</a>
+            <a href="/total.html">สรุปผล</a>
+          </div>
+        </div>
+
+        <div class="username">
+          <a href="/login.html"><p>ละมุด</p></a>
+        </div>
+      </div>
+    </header>
+
+    <div id="stats" style="display: none"></div>
+    <div id="main">
+      <div class="container">
+        <div class="canvas-wrapper">
+          <p id="result">Result:</p>
+          <p id="timer">00</p>
+
+          <canvas id="output"></canvas>
+          <video id="video" playsinline="" style="
+              -webkit-transform: scaleX(-1);
+              transform: scaleX(-1);
+              visibility: hidden;
+              width: auto;
+              height: auto;
+            "></video>
+        </div>
+        <div id="scatter-gl-container"></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+  <script src="/src.a2b27638.js"></script>
+</html>

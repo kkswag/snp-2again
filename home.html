@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+      integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="left">
+          <div class="logo">
+            <img src="./src/img/logo.png" alt="" />
+          </div>
+
+          <div class="menu">
+            <a href="./home.html">หน้าหลัก</a>
+            <a href="./exerTime.html">ออกกำลังกาย</a>
+            <a href="./follow.html">ติดตามอาการ</a>
+            <a href="./total.html">สรุปผล</a>
+          </div>
+        </div>
+
+        <div class="username">
+          <a href="./login.html"><p>ละมุด</p></a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div id="popupQR">
+        <div class="qrcode">
+          <div class="qrContain">
+            <div class="close">
+              <button onclick="FunctionClose()">
+                <i class="fa-regular fa-circle-xmark"></i>
+              </button>
+            </div>
+            <p>
+              สแกน qr code line official เพื่อรับการแจ้งเตือน
+              <span>เมื่อกำหนดเวลาการบริหารกายบำบัดมาถึง</span>
+            </p>
+            <div class="imgQr">
+              <img src="./src/img/qrcode.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="initailST">
+        <div id="wrap">
+          <div class="headST">
+            <h1>อาการเบื้องต้น</h1>
+            <button>ข้าม <i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+          <!-- head-form -->
+          <div class="detailIniST">
+            <div class="headPart">
+              <h1>ส่วนศีรษะ</h1>
+              <h2>อาการปวดหัวไมเกรน</h2>
+            </div>
+
+            <div class="headForm">
+              <div class="form-check-1">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดรุนแรงเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check-2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดไม่รุนแรง แต่ปวดเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check-3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ไม่มีอาการปวด
+                </label>
+              </div>
+              <div class="form-check-4">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดรุนแรง นานๆครั้ง
+                </label>
+              </div>
+              <div class="form-check-5">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดไม่รุนแรง นานๆครั้ง
+                </label>
+              </div>
+            </div>
+            <hr class="under-line" />
+          </div>
+
+          <!-- neck-form -->
+          <div class="detailIniST">
+            <div class="headPart">
+              <h1>ส่วนคอ</h1>
+              <h2>อาการปวด ตึงคอ</h2>
+            </div>
+
+            <div class="shoulderForm">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดรุนแรงเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดไม่รุนแรง แต่ปวดเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ไม่มีอาการปวด
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดรุนแรง นานๆครั้ง
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดไม่รุนแรง นานๆครั้ง
+                </label>
+              </div>
+            </div>
+            <hr class="under-line" />
+          </div>
+
+          <!-- shoulder-form -->
+          <div class="detailIniST">
+            <div class="headPart">
+              <h1>ส่วนไหล่</h1>
+              <h2>อาการปวด ตึงไหล่</h2>
+            </div>
+
+            <div class="shoulderForm">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดรุนแรงเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดไม่รุนแรง แต่ปวดเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ไม่มีอาการปวด
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดรุนแรง นานๆครั้ง
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดไม่รุนแรง นานๆครั้ง
+                </label>
+              </div>
+            </div>
+            <hr class="under-line" />
+          </div>
+
+          <!-- sabak-form -->
+          <div class="detailIniST">
+            <div class="headPart">
+              <h1>ส่วนสะบัก</h1>
+              <h2>อาการปวด ตึงสะบัก</h2>
+            </div>
+
+            <!-- sabak-form -->
+            <div class="shoulder2Form">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดรุนแรงเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดไม่รุนแรง แต่ปวดเป็นประจำ
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ไม่มีอาการปวด
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  ปวดรุนแรง นานๆครั้ง
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  ปวดไม่รุนแรง นานๆครั้ง
+                </label>
+              </div>
+            </div>
+            <hr class="under-line" />
+          </div>
+        </div>
+        <div class="summit-btton">
+          <button>ยืนยัน</button>
+        </div>
+
+        <footer>
+          <div class="logoFooter">
+            <img src="./src/img/logo.png" alt="" />
+          </div>
+          <div class="ads">
+            <p>2022 SNP .All Rights Reswrved</p>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </body>
+  <!-- <script src="./btQRclose.js"></script> -->
+</html>

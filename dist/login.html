@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js" integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/style.c61ab535.css">
+    <title>login</title>
+  </head>
+  <body>
+    <div class="loginPart">
+      <div class="background"></div>
+      <div class="login">
+        <h1>WELLCOME</h1>
+        <img src="/logo and text2.6bb61a10.png" alt="">
+
+        <div class="loginForm">
+          <div class="userPart">
+            <p>USERNAME</p>
+            <input type="text" name="usernameL" id="usernameL">
+          </div>
+
+          <div class="passwordPart">
+            <p>PASSWORD</p>
+            <input type="password" name="passwordL" id="passwordL">
+          </div>
+          <a href="/register.html">Register</a>
+        </div>
+
+        <a><button class="btLogin">LOGIN</button></a>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js " integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=" anonymous " referrerpolicy="no-referrer "></script>
+
+  <script>var username = document.getElementById("usernameL").value;
+var password = document.getElementById("passwordL").value;
+$(".btLogin").click(function () {
+  var username = $("#usernameL").val();
+  var password = $("#passwordL").val();
+  console.log("Username:", $("#usernameL").val());
+  console.log("Password:", $("#passwordL").val());
+  $.ajax({
+    method: "POST",
+    url: "http://localhost:428/test/checkLogin.php",
+    data: {
+      username: username,
+      password: password
+    },
+    success: function success(response) {
+      console.log("response :", response);
+      if (response == "Connected successfullylogged_in") {
+        alert("login success");
+        window.location = "./home.html";
+      } else if (response == "password_wrong") {
+        alert("Password not found");
+        window.location = "./login.html";
+      } else {
+        alert("User not found");
+        window.location = "./login.html";
+      }
+    }
+  });
+});</script>
+</html>
