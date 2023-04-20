@@ -40,12 +40,12 @@
             <a href="./home.html">หน้าหลัก</a>
             <a href="./exerTime.html">ออกกำลังกาย</a>
             <a href="./follow.html">ติดตามอาการ</a>
-            <a href="./total.html">สรุปผล</a>
+            <!-- <a href="./total.html">สรุปผล</a> -->
           </div>
         </div>
 
         <div class="username">
-          <a href="./login.html"><p>Natnicha</p></a>
+          <p id="user_name"></p>
         </div>
       </div>
     </header>
@@ -316,9 +316,22 @@
           <img src="./src/img/logo2NT.png" alt="" />
         </div>
         <div class="ads">
-          <p>2022 SNP .All Rights Reswrved</p>
+          <p>2022 SNP .All Rights Reserved</p>
         </div>
     </footer>
 
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script>
+    let username = document.getElementById("user_name");
+    let get_user = localStorage.getItem("username");
+    username.append(get_user);
+
+    $("#user_name").click(function(){
+      localStorage.removeItem("username");
+      window.location.replace("./login.html");
+    })
+  </script>
 </html>

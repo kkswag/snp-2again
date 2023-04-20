@@ -32,7 +32,7 @@
     <div class="loginPart">
       <div class="background"></div>
       <div class="loginIm">
-        <h1>WELLCOME</h1>
+        <h1>WELCOME</h1>
         <img src="./src/img/logo2.png" alt="" />
 
         <div class="loginForm">
@@ -60,14 +60,13 @@
   ></script>
 
   <script>
-    var username = document.getElementById("usernameL").value;
-    var password = document.getElementById("passwordL").value;
-
     $(".btLogin").click(function () {
-      var username = $("#usernameL").val();
-      var password = $("#passwordL").val();
-      console.log("Username:", $("#usernameL").val());
-      console.log("Password:", $("#passwordL").val());
+      // var username = $("#usernameL").val();
+      // var password = $("#passwordL").val();
+      // console.log("Username:", $("#usernameL").val());
+      // console.log("Password:", $("#passwordL").val());
+      var username = document.getElementById("usernameL").value;
+      var password = document.getElementById("passwordL").value;
       $.ajax({
         method: "POST",
         url: "http://localhost:428/test/checkLogin.php",
@@ -76,14 +75,15 @@
           password: password,
         },
         success: function (response) {
-          console.log("response :", response);
-          if (response == "Connected successfullylogged_in") {
+          console.log(response);
+          if (response == "success") {
             alert("login success");
+            localStorage.setItem("username",username);
             window.location = "./home.html";
-          } else if (response == "password_wrong") {
-            alert("Password not found");
+          } else if (response == "Incorrect password") {
+            alert("Incorrect password");
             window.location = "./login.html";
-          } else {
+          } else if (response == "User not found") {
             alert("User not found");
             window.location = "./login.html";
           }

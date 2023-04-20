@@ -14,10 +14,16 @@ body {
 header {
   width: 100%;
   height: 120px;
-  background-color: #5d256b;
+  /* background-color: #5d256b; */
   /* display: flex; */
   /* justify-content: space-around;
     align-items: center; */
+  background: rgb(238, 170, 136);
+  background: linear-gradient(
+    90deg,
+    rgba(238, 170, 136, 1) 0%,
+    rgba(168, 144, 254, 1) 100%
+  );
 }
 .nav {
   width: 100%;
@@ -47,15 +53,15 @@ header {
   /* flex-basis: 80%; */
 }
 .menu a,
-.username a {
+.username p {
   font-family: "Prompt";
   color: white;
   padding-left: 25px;
   text-decoration: none;
 }
-.menu a:nth-child(2) {
-  /* text-decoration: underline; */
-}
+/* .menu a:nth-child(2) {
+  text-decoration: underline;
+} */
 #app {
   margin-top: 40px;
   display: flex;
@@ -70,18 +76,59 @@ canvas {
   align-items: center;
   justify-content: center;
 }
+#boxTime{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 1440px;
+  height: 98px;
+}
+#boxTime p{
+  font-family: prompt;
+  font-size: 28px;
+}
 
 /* .showfail {
   display: flex;
   flex-direction: row;
   align-items: center;
 } */
-.circle {
+.circle_one,.circle_two,.circle_three,.circle_four,.circle_five,.circle_six,.circle_seven,.circle_eight,.circle_nine {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background-color: #ff5c5c;
   margin-left: 10px;
+}
+.markHuman{
+  top: 30%;
+}
+#mark1, #mark2{
+  display: none;
+}
+#poseEx1 ,#poseEx2 ,#poseEx3 ,#poseEx4 ,#poseEx5 ,#poseEx6 ,#poseEx7 ,#poseEx8{
+  display: none;
+}
+.warn{
+  font-family: prompt;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 530px;
+}
+#description{
+  width: 347px;
+  height: auto;
+  margin-top: 55px;
+}
+.imgEx{
+  width: 290px;
+  /* height: 150px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 #sectioncamera {
   height: 623px;
@@ -105,8 +152,12 @@ canvas {
   font-weight: bold;
   font-size: 20px;
 }
+.description{
+  width: auto;
+  height: auto;
+}
 .cropDes {
-  height: 470px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,20 +165,26 @@ canvas {
 .headDes p {
   font-size: 20px;
 }
+.howto{
+  text-align: start;
+  /* padding-left: 50px; */
+}
 .howto h1 {
   font-size: 22px;
   padding: 15px 0;
+  padding-left: 50px;
 }
 .subHowto p {
   font-size: 18px;
   display: flex;
   flex-direction: column;
   line-height: 20px;
-  text-align: left;
+  text-align: start;
 }
 #show_btn {
   text-align: center;
 }
+
 
 /* ------------- section home ------------- */
 /* #popupQR {
@@ -199,12 +256,13 @@ canvas {
 }
 
 .headST h1 {
-  color: #823051;
+  color: #5d256b;
   font-family: prompt;
-  font-size: 30px;
+  font-size: 36px;
   flex-basis: 90%;
   text-align: center;
   /* padding-left: 75px; */
+  margin: 50px 0;
 }
 
 .headST button {
@@ -236,6 +294,10 @@ canvas {
   font-size: 22px;
   font-weight: 400;
 }
+.headPart img {
+  margin: 50px 0 30px 0;
+  width: 15%;
+}
 
 /* .headForm {
   display: flex;
@@ -260,6 +322,7 @@ canvas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
+  margin-left: 130px;
 }
 
 .summit-btton {
@@ -271,7 +334,7 @@ canvas {
 }
 
 .summit-btton button {
-  background-color: #8b2852;
+  background-color: #5d256b;
   width: 10rem;
   height: 3rem;
   border: 0;
@@ -282,7 +345,8 @@ canvas {
 }
 
 footer {
-  background-color: #5d256b;
+  /* background-color: #5d256b; */
+  background-color: #a993d2;
   height: 5rem;
   display: flex;
   justify-content: space-around;
@@ -464,27 +528,28 @@ footer .ads {
 }
 .headTime h1 {
   font-family: prompt;
-  color: #032e58;
-  font-size: 30px;
+  color: #5d256b;
+  font-size: 36px;
   margin: 50px 0;
 }
 .cropboxTime {
-  background-color: #c9b2d7;
+  /* background-color: #c9b2d7; */
+  background: rgba(191, 169, 232, 0.4);
   border-radius: 50px;
-  height: 1200px;
+  height: 570px;
   margin-bottom: 100px;
 }
 .cropboxTime h1 {
   font-size: 24px;
   font-family: prompt;
-  color: white;
-  font-weight: lighter;
-  padding: 40px 0;
+  color: black;
+  font-weight: 400;
+  padding: 40px 0 20px 0;
 }
 .boxTime {
   display: flex;
-  justify-content: space-evenly;
-  height: 790px;
+  justify-content: center;
+  height: 559px;
 }
 .fTime {
   width: 500px;
@@ -496,16 +561,46 @@ footer .ads {
   align-items: center;
   justify-content: space-evenly;
   font-family: dm sans;
-  color: #032e58;
+  color: black;
   font-size: 22px;
+  margin-top: 20px;
 }
 .fHeadTime p:nth-child(1) {
-  color: white;
-  font-family: prompt;
+  font-weight: bold;
+}
+.fHeadTime i {
+  color: #5d256b;
 }
 
 /* ---------- section calendar ----------- */
-
+#date_one {
+  font-size: 20px;
+  font-family: prompt;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #000;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+/* #date_two {
+  font-size: 20px;
+  font-family: prompt;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #000;
+  padding: 0 10px;
+  border-radius: 10px;
+} */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+} 
 .calendar {
   display: inline-grid;
   justify-content: center;
@@ -597,7 +692,8 @@ footer .ads {
   display: flex;
   font-family: prompt;
   flex-wrap: wrap;
-  text-align: start;
+  text-align: center;
+  justify-content: center;
   width: 400px;
   margin: 0 auto;
 }
@@ -608,7 +704,7 @@ footer .ads {
 .warnForwordF p,
 .timeForPerpost p {
   font-size: 20px;
-  color: #032e58;
+  color: black;
 }
 .seTime select {
   width: 130px;
@@ -631,19 +727,41 @@ footer .ads {
 }
 .startExercise {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   padding-top: 10px;
 }
-.startExercise button {
+/* .startExercise button {
   width: 200px;
   height: 50px;
   border: none;
   border-radius: 10px;
   color: white;
-  background-color: #823051;
+  background-color: #5d256b;
   font-family: prompt;
   font-size: 20px;
   font-weight: lighter;
+} */
+#save{
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #5d256b;
+  font-family: prompt;
+  font-size: 20px;
+  font-weight: lighter;
+}
+.startEx{
+  width: 200px;
+  height: 50px;
+  border: 2px solid#5d256b;
+  border-radius: 10px;
+  color: #5d256b;
+  background-color: white;
+  font-family: prompt;
+  font-size: 20px;
+  font-weight: bold;
 }
 .fTime hr {
   margin-top: 20px;
@@ -659,7 +777,7 @@ footer .ads {
   margin-left: -451px;
 }
 .addExercise {
-  text-align: start;
+  text-align: center;
   margin-left: 100px;
 }
 .addExercise button {
@@ -667,10 +785,15 @@ footer .ads {
   border-radius: 20px;
   width: 358px;
   height: 50px;
-  color: white;
-  background-color: #823051;
+  color: black;
+  background-color: white;
   font-family: prompt;
   font-size: 20px;
+}
+.tip p{
+  font-family: prompt;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* ----------------- section follow symtom -------------------- */
@@ -682,9 +805,10 @@ footer .ads {
   justify-content: center;
 }
 .headFollow h1 {
-  color: #032e58;
+  color: #5d256b;
   font-family: prompt;
-  font-size: 30px;
+  font-size: 36px;
+  margin: 50px 0;
 }
 .fHeadPart h1,
 .fNeckPart h1,
@@ -737,16 +861,20 @@ footer .ads {
   align-items: center;
 }
 
-/* ----------------- section follow symtom -------------------- */
+/* ----------------- section total -------------------- */
 
+.total {
+  margin-top: 25px;
+}
 .headtotal {
   display: flex;
   justify-content: center;
 }
 .headtotal h1 {
   font-family: prompt;
-  color: #032e58;
-  font-size: 30px;
+  color: #5d256b;
+  font-size: 36px;
+  margin: 50px 0;
 }
 .cropcalendar {
   display: flex;
@@ -800,4 +928,10 @@ footer .ads {
   font-family: prompt;
   color: #823051;
   font-size: 22px;
+}
+
+/* ----------------- ADMIN Page -------------------- */
+canvas {
+  border: 1px solid black;
+  padding: 10px;
 }

@@ -30,7 +30,7 @@ limitations under the License.
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/style.css">
     <title>Exercise Page</title>
     <style>
       body {
@@ -53,6 +53,9 @@ limitations under the License.
       #scatter-gl-container {
         position: relative;
       } */
+      .canvas-wrapper{
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
@@ -67,15 +70,19 @@ limitations under the License.
             <a href="./home.html">หน้าหลัก</a>
             <a href="./exerTime.html">ออกกำลังกาย</a>
             <a href="./follow.html">ติดตามอาการ</a>
-            <a href="./total.html">สรุปผล</a>
+            <!-- <a href="./total.html">สรุปผล</a> -->
           </div>
         </div>
 
         <div class="username">
-          <a href="./login.html"><p>Natnicha</p></a>
+          <p id="user_name"></p>
         </div>
       </div>
     </header>
+
+    <section id="boxTime">
+      <p id="timer">count time start 00</p>
+    </section>
 
     <section id="sectioncamera">
       <div id="stats" style="display: none"></div>
@@ -83,27 +90,52 @@ limitations under the License.
       <div class="container-fluid">
 
       
-        <div class="row justify-content-between text-center">
+        <div class="row justify-content-center text-center">
           <div class="col-3">
             <div class="setExcerise">
               <div class="cropSet">
                 <p>อาการปวดปานกลาง</p>
-                <p>4 set</p>
+                <!-- <p>4 set</p> -->
                 <br class="showfail">
                 <div class="linecircle">
-                  <p id="setID">1: </p>
-                  <div class="circle"></div>
+                  <!--  ท่าที่ 1  -->
+                  <p id="set_one">ท่าที่ 1 step 1: </p>
+                  <div class="circle_one"></div><br>
+                  <div class="circle_two"></div>
                 </div>
-                <p id="timer">count time start 00</p>
+                <div class="linecircle">
+                  <!--  ท่าที่ 2  -->
+                  <p id="set_two">ท่าที่ 2 step 1: </p>
+                  <div class="circle_three"></div><br>
+                  <div class="circle_four"></div>
+                </div>
+                <div class="linecircle">
+                  <!--  ท่าที่ 3  -->
+                  <p id="set_three">ท่าที่ 3 step 1: </p>
+                  <div class="circle_five"></div><br>
+                  <div class="circle_six"></div>
+                </div>
+                <div class="linecircle">
+                  <!--  ท่าที่ 4  -->
+                  <p id="set_four">ท่าที่ 4 step 1: </p>
+                  <div class="circle_seven"></div><br>
+                  <div class="circle_eight"></div>
+                </div>
+                <!-- <div class="linecircle">
+                   ท่าที่ 5 
+                  <p id="set_five">ท่าที่ 5 step 1: </p>
+                  <div class="circle_nine"></div>
+                </div> -->
+                <!-- <p id="timer">count time start 00</p> -->
+                <!-- <p id="direction">Step 1: เอียงคอไปทางซ้าย</p> -->
               </div>
             </div>
           </div>
 
           <div class="col-6">
             <!-- <div class="container"> -->
-              <div class="canvas-wrapper w-100">
+              <div class="canvas-wrapper w-100 position-relative">
                 
-
                 <canvas id="output"></canvas>
                 <video
                   id="video"
@@ -120,28 +152,52 @@ limitations under the License.
               <div id="scatter-gl-container"></div>
             <!-- </div> -->
           </div>
+          <div class="warn position-absolute mt-530px">
+            <p>คำแนะนำ : ผู้ใช้ควรขยับร่างกายให้อยู่พอดีกรอบเพื่อการตรวจจับที่ถูกต้อง</p>
+          </div>
+          <div class="markHuman position-absolute w-25">
+            <img id="mark2" class="markPoint" src="./src/img/markPoint2.png" alt="">
+            <img id="mark1" class="markPoint" src="./src/img/markPoint.png" alt="">
+          </div>
+          
 
 
           <div class="col-3">
             <div id="description">
+              <div class="imgEx">
+                <!-- <img src="./src/img/post1.jpg" alt="pose exercise one"> -->
+                <!-- <img id="poseEx1" src="/dist/pose1.2744c3c2.7279676d.jpg" class="w-100"alt=""> -->
+                <img id="poseEx1" class="poseEx w-100" src="/src/img/pose1.jpg" alt="">
+                <img id="poseEx2" class="poseEx w-100" src="/src/img/pose2.jpg" alt="">
+                <img id="poseEx3" class="poseEx w-100" src="/src/img/pose3.jpg" alt="">
+                <img id="poseEx4" class="poseEx w-100" src="/src/img/pose4.jpg" alt="">
+                <img id="poseEx5" class="poseEx w-100" src="/src/img/pose5.jpg" alt="">
+                <img id="poseEx6" class="poseEx w-100" src="/src/img/pose6.jpg" alt="">
+                <img id="poseEx7" class="poseEx w-100" src="/src/img/pose7.jpg" alt="">
+                <img id="poseEx8" class="poseEx w-100" src="/src/img/pose8.jpg" alt="">
+                
+              </div>
               <div class="cropDes">
-                <div class="headDes">
+                <!-- <div class="headDes">
                   <p>ท่านี้ช่วยในส่วนของ <br> "อาการปวดคอและไหล่"</p>
-                </div>
+                </div> -->
                 <div class="howto">
                   <h1>วิธีการออกกำลังกาย</h1>
                   <div class="subHowto">
-                    <p>1. ทำให้หน้า คอ และไหล่ตรงกับกล้อง</p>
+                    <p id="direction">Step 1: เอียงคอไปทางซ้าย</p>
+                    <!-- <p>1. ทำให้หน้า คอ และไหล่ตรงกับกล้อง</p>
                     <p>2. หันหน้า/คอ ไปทางขวาหรือซ้าย โดยให้ไหล่ตรงเหมือนเดิม</p>
-                    <p>3. ค้างไว้ 10 วินาที ทั้งสองข้างทั้งซ้ายและขวา</p>
+                    <p>3. ค้างไว้ 10 วินาที ทั้งสองข้างทั้งซ้ายและขวา</p> -->
                   </div>
                 </div>
+                <div id="show_btn"></div>
+                
               </div>
             </div>
           </div>
         </div>
 
-      <div id="show_btn"></div>
+     
 
     </div>
   </section>
@@ -151,7 +207,7 @@ limitations under the License.
       <img src="./src/img/logo2NT.png" alt="" />
     </div>
     <div class="ads">
-      <p>2022 SNP .All Rights Reswrved</p>
+      <p>2022 SNP .All Rights Reserved</p>
     </div>
   </footer>
 
@@ -162,28 +218,47 @@ limitations under the License.
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js" integrity="sha512-L4lHq2JI/GoKsERT8KYa72iCwfSrKYWEyaBxzJeeITM9Lub5vlTj8tufqYk056exhjo2QDEipJrg6zen/DDtoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="src/index.js"></script>
   <script>
+    $('#poseEx1').show()
+    $('#mark2').show()
+
+    let username = document.getElementById("user_name");
+    let get_user = localStorage.getItem("username");
+    username.append(get_user);
+
+    $("#user_name").click(function(){
+      localStorage.removeItem("username");
+      window.location.replace("./login.html");
+    })
     function upload() {
     let data = "success";
-    // let status = "success";
-    // console.log(status);
+    let status = "success";
+    // let username = "get_user";
+    // console.log(get_user);
+    // console.log(typeof get_user);
     
-  axios.post("http://localhost:428/test/saveData.php")
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
-    // $.ajax({
-    //     type: "POST",
-    //     url: "http://localhost:428/test/saveData.php",
-    //     data: {
-    //         status: status,
-    //     },
-    //     success: function (response) {
-    //       console.log(response);
-    //     }
-    // });
+  // axios.post("http://localhost:428/test/saveData.php")
+  // .then(response => {
+  //   console.log(response.data);
+  // })
+  // .catch(error => {
+  //   console.log(error);
+  // });
+    
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:428/test/saveData.php",
+        data: {
+            username: get_user
+        },
+        success: function (response) {
+          if(response == "success"){
+            window.location.href = "/follow.html";
+          }else{
+            alert("ไม่สามารถบันทึกข้อมูลได้")
+            window.location.href = "/index.html"
+          }
+        }
+    });
   }
   </script>
 

@@ -1,15 +1,14 @@
 <?php
-$servername = "localhost";
-$username_db = "root";
-$password_db = "";
+$host = "localhost"; // The host of the database
+$username = "root"; // The username of the database
+$password = ""; // The password of the database
+$database_name = "office_thera"; // The name of the database
 
-// Create connection
+// Create a connection to the database
+$conn = new mysqli($host, $username, $password, $database_name);
 
-$db = mysqli_connect($servername, $username_db, $password_db, 'office_thera');
-
-//Check connection
-if ($db->connect_error) {
-  die("Connection failed: " . $db->connect_error);
-} 
-//  echo "Connected successfully";
+// Check if the connection was successful
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 ?>

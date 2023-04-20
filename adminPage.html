@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
+      integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>ADMIN</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <div class="left">
+          <div class="logo">
+            <img src="./src/img/logo2.png" alt="" />
+          </div>
+
+          <div class="menu">
+            <a href="./adminPage.html">หน้าหลัก</a>
+          </div>
+        </div>
+
+        <div class="username">
+          <a href="./login.html"><p>Natnicha</p></a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h1>ผู้สมัครเข้าใช้งาน</h1>
+      <div class="grafUser">
+        <div class="textUpdate">
+          <p>+24 คนภายในเดือนนี้</p>
+          <p>ปัจจุบันมีผู้ใช้งานทั้งหมด 78 คน</p>
+        </div>
+
+        <div class="graf">
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const canvas = document.getElementById("chart");
+      const ctx = canvas.getContext("2d");
+
+      ctx.font = "16px Arial";
+      ctx.fillStyle = "black";
+    </script>
+  </body>
+</html>

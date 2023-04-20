@@ -38,14 +38,14 @@
 
           <div class="menu">
             <a href="./home.html">หน้าหลัก</a>
-            <a href="./index.html">ออกกำลังกาย</a>
+            <a href="">ออกกำลังกาย</a>
             <a href="./follow.html">ติดตามอาการ</a>
-            <a href="./total.html">สรุปผล</a>
+            <!-- <a href="./total.html">สรุปผล</a> -->
           </div>
         </div>
 
         <div class="username">
-          <a href="./login.html"><p>Natnicha</p></a>
+          <p id="user_name"></p>
         </div>
       </div>
     </header>
@@ -58,132 +58,22 @@
         <div id="wrap">
           <div class="cropboxTime">
             <h1>คำแนะนำ : ควรเลือกช่วงเวลาอย่างน้อย 2 ช่วงขึ้นไป</h1>
+            <p>เลือกวันที่ในการออกกำลังกาย</p>
+            <input type="date" id="date_one"/>
             <div class="boxTime">
               <div class="leftTime">
-                <div class="calendar">
-                  <div class="month">
-                    <a href="#" class="nav"
-                      ><i class="fas fa-angle-left"></i
-                    ></a>
-                    <div>january <span class="year">2023</span></div>
-                    <a href="#" class="nav"
-                      ><i class="fas fa-angle-right"></i
-                    ></a>
-                  </div>
-                  <div class="days">
-                    <span>M</span>
-                    <span>T</span>
-                    <span>W</span>
-                    <span>T</span>
-                    <span>F</span>
-                    <span>S</span>
-                    <span>S</span>
-                  </div>
-                  <div class="dates">
-                    <button>
-                      <time>1</time>
-                    </button>
-                    <button>
-                      <time>2</time>
-                    </button>
-                    <button>
-                      <time>3</time>
-                    </button>
-                    <button>
-                      <time>4</time>
-                    </button>
-                    <button>
-                      <time>5</time>
-                    </button>
-                    <button>
-                      <time>6</time>
-                    </button>
-                    <button>
-                      <time>7</time>
-                    </button>
-                    <button>
-                      <time>8</time>
-                    </button>
-                    <button>
-                      <time>9</time>
-                    </button>
-                    <button>
-                      <time>10</time>
-                    </button>
-                    <button>
-                      <time>11</time>
-                    </button>
-                    <button>
-                      <time>12</time>
-                    </button>
-                    <button>
-                      <time>13</time>
-                    </button>
-                    <button>
-                      <time>14</time>
-                    </button>
-                    <button>
-                      <time>15</time>
-                    </button>
-                    <button>
-                      <time>16</time>
-                    </button>
-                    <button>
-                      <time>17</time>
-                    </button>
-                    <button>
-                      <time>18</time>
-                    </button>
-                    <button>
-                      <time>19</time>
-                    </button>
-                    <button>
-                      <time>20</time>
-                    </button>
-                    <button>
-                      <time>21</time>
-                    </button>
-                    <button>
-                      <time>22</time>
-                    </button>
-                    <button>
-                      <time>23</time>
-                    </button>
-                    <button>
-                      <time>24</time>
-                    </button>
-                    <button class="today">
-                      <time>25</time>
-                    </button>
-                    <button>
-                      <time>26</time>
-                    </button>
-                    <button>
-                      <time>27</time>
-                    </button>
-                    <button>
-                      <time>28</time>
-                    </button>
-                    <button>
-                      <time>29</time>
-                    </button>
-                    <button>
-                      <time>30</time>
-                    </button>
-                    <button>
-                      <time>31</time>
-                    </button>
-                  </div>
-                </div>
+                <!-- <input type="date" id="date" /> -->
               </div>
 
               <div class="rightTime">
                 <div class="fTime">
                   <div class="fHeadTime">
                     <p>ช่วงที่ 1</p>
-                    <p>Wednesday 18 January 2023</p>
-                    <i class="fa-solid fa-gear"></i>
-                    <i class="fa-sharp fa-solid fa-trash"></i>
+                    <!-- <p id="output_date"></p> -->
+                    <!-- <input type="date" id="date_one" /> -->
+
+                    <!-- <i class="fa-solid fa-gear"></i>
+                    <i class="fa-sharp fa-solid fa-trash"></i> -->
                   </div>
 
                   <div class="selectFirstET">
@@ -192,33 +82,41 @@
                       <select
                         class="form-select"
                         aria-label="Default select example"
+                        id="time_one"
                       >
-                        <!-- <option selected>เลือกช่วงเวลา</option> -->
-                        <option value="1">00 : 00 AM</option>
-                        <option value="2">01 : 00 AM</option>
-                        <option value="3">02 : 00 AM</option>
-                        <option value="4">03 : 00 AM</option>
-                        <option value="5">04 : 00 AM</option>
-                        <option value="6">05 : 00 AM</option>
-                        <option value="7">06 : 00 AM</option>
-                        <option value="8">07 : 00 AM</option>
-                        <option value="9">08 : 00 AM</option>
-                        <option value="10">09 : 00 AM</option>
-                        <option value="11">10 : 00 AM</option>
-                        <option value="12">11 : 00 AM</option>
-                        <option value="13">12 : 00 PM</option>
-                        <option value="14">13 : 00 PM</option>
-                        <option value="15">14 : 00 PM</option>
-                        <option value="16">15 : 00 PM</option>
-                        <option value="17">16 : 00 PM</option>
-                        <option value="18">17 : 00 PM</option>
-                        <option value="19">18 : 00 PM</option>
-                        <option value="20">19 : 00 PM</option>
-                        <option value="21">20 : 00 PM</option>
-                        <option value="22">21 : 00 PM</option>
-                        <option value="23">22 : 00 PM</option>
-                        <option value="24">23 : 00 PM</option>
+                        <!-- <option value="00 : 00 AM">00 : 00 AM</option>
+                        <option value="01 : 00 AM">01 : 00 AM</option>
+                        <option value="02 : 00 AM">02 : 00 AM</option>
+                        <option value="03 : 00 AM">03 : 00 AM</option>
+                        <option value="04 : 00 AM">04 : 00 AM</option> -->
+                        <option value="05 : 00 AM">05 : 00 AM</option>
+                        <option value="06 : 00 AM">06 : 00 AM</option>
+                        <option value="07 : 00 AM">07 : 00 AM</option>
+                        <option value="08 : 00 AM">08 : 00 AM</option>
+                        <option value="09 : 00 AM">09 : 00 AM</option>
+                        <option value="10 : 00 AM">10 : 00 AM</option>
+                        <option value="11 : 00 AM">11 : 00 AM</option>
+                        <option value="12 : 00 PM">12 : 00 PM</option>
+                        <option value="13 : 00 PM">13 : 00 PM</option>
+                        <option value="14 : 00 PM">14 : 00 PM</option>
+                        <option value="15 : 00 PM">15 : 00 PM</option>
+                        <option value="16 : 00 PM">16 : 00 PM</option>
+                        <option value="17 : 00 PM">17 : 00 PM</option>
+                        <option value="18 : 00 PM">18 : 00 PM</option>
+                        <option value="19 : 00 PM">19 : 00 PM</option>
+                        <option value="20 : 00 PM">20 : 00 PM</option>
+                        <!-- <option value="21 : 00 PM">21 : 00 PM</option>
+                        <option value="22 : 00 PM">22 : 00 PM</option>
+                        <option value="23 : 00 PM">23 : 00 PM</option> -->
                       </select>
+                      <!-- <input
+                        type="time"
+                        id="time_one"
+                        name="time"
+                        min="00:00"
+                        max="23:59"
+                        step="1"
+                      /> -->
                     </div>
 
                     <div class="warnForwordF">
@@ -226,21 +124,22 @@
                       <select
                         class="form-select"
                         aria-label="Default select example"
+                        id="alarm_one"
                       >
                         <!-- <option selected>Open this select menu</option> -->
-                        <option value="1">5 นาที</option>
-                        <option value="2">10 นาที</option>
-                        <option value="3">15 นาที</option>
-                        <option value="4">20 นาที</option>
-                        <option value="5">25 นาที</option>
-                        <option value="6">30 นาที</option>
+                        <option value="5 นาที">5 นาที</option>
+                        <option value="10 นาที">10 นาที</option>
+                        <option value="15 นาที">15 นาที</option>
+                        <option value="20 นาที">20 นาที</option>
+                        <option value="25 นาที">25 นาที</option>
+                        <option value="30 นาที">30 นาที</option>
                       </select>
                     </div>
 
-                    <div class="timeForPerpost">
-                      <p>
+                    <!-- <div class="timeForPerpost"> -->
+                      <!-- <p>
                         *ระยะเวลาในการออกกำลังกายขึ้นอยู่กับระดับอาการของคุณ
-                      </p>
+                      </p> -->
                       <!-- <select
                         class="form-select"
                         aria-label="Default select example"
@@ -250,54 +149,64 @@
                         <option value="3">4 นาที</option>
                         <option value="4">5 นาที</option>
                       </select> -->
-                    </div>
+                    <!-- </div> -->
+
                   </div>
+
+                  <div class="tip">
+                    <p>
+                      *ระยะเวลาในการออกกำลังกายขึ้นอยู่กับระดับอาการของคุณ
+                    </p>
+                  </div>
+
 
                   <div class="startExercise">
-                    <a href="./index.html"><button>เริ่มออกกำลังกาย</button></a>
+                    <!-- <button>บันทึก</button> -->
+                    <button id="save">บันทึก</button>
+                    <a href="./index.html"><button class="startEx">เริ่มออกกำลังกาย</button></a>
                   </div>
 
-                  <hr />
+                  <!-- <hr /> -->
 
-                  <div class="fHeadTime">
+                  <!-- <div class="fHeadTime">
                     <p>ช่วงที่ 2</p>
-                    <p>Wednesday 18 January 2023</p>
+                    <input type="date" id="date_two" />
                     <i class="fa-solid fa-gear"></i>
                     <i class="fa-sharp fa-solid fa-trash"></i>
-                  </div>
+                  </div> -->
 
-                  <div class="selectFirstET">
+                  <!-- <div class="selectFirstET">
                     <div class="seTime">
                       <p>เลือกช่วงเวลา</p>
                       <select
                         class="form-select"
                         aria-label="Default select example"
+                        id="time_two"
                       >
-                        <!-- <option selected>เลือกช่วงเวลา</option> -->
-                        <option value="1">00 : 00 AM</option>
-                        <option value="2">01 : 00 AM</option>
-                        <option value="3">02 : 00 AM</option>
-                        <option value="4">03 : 00 AM</option>
-                        <option value="5">04 : 00 AM</option>
-                        <option value="6">05 : 00 AM</option>
-                        <option value="7">06 : 00 AM</option>
-                        <option value="8">07 : 00 AM</option>
-                        <option value="9">08 : 00 AM</option>
-                        <option value="10">09 : 00 AM</option>
-                        <option value="11">10 : 00 AM</option>
-                        <option value="12">11 : 00 AM</option>
-                        <option value="13">12 : 00 PM</option>
-                        <option value="14">13 : 00 PM</option>
-                        <option value="15">14 : 00 PM</option>
-                        <option value="16">15 : 00 PM</option>
-                        <option value="17">16 : 00 PM</option>
-                        <option value="18">17 : 00 PM</option>
-                        <option value="19">18 : 00 PM</option>
-                        <option value="20">19 : 00 PM</option>
-                        <option value="21">20 : 00 PM</option>
-                        <option value="22">21 : 00 PM</option>
-                        <option value="23">22 : 00 PM</option>
-                        <option value="24">23 : 00 PM</option>
+                        <option value="00 : 00 AM">00 : 00 AM</option>
+                        <option value="01 : 00 AM">01 : 00 AM</option>
+                        <option value="02 : 00 AM">02 : 00 AM</option>
+                        <option value="03 : 00 AM">03 : 00 AM</option>
+                        <option value="04 : 00 AM">04 : 00 AM</option>
+                        <option value="05 : 00 AM">05 : 00 AM</option>
+                        <option value="06 : 00 AM">06 : 00 AM</option>
+                        <option value="07 : 00 AM">07 : 00 AM</option>
+                        <option value="08 : 00 AM">08 : 00 AM</option>
+                        <option value="09 : 00 AM">09 : 00 AM</option>
+                        <option value="10 : 00 AM">10 : 00 AM</option>
+                        <option value="11 : 00 AM">11 : 00 AM</option>
+                        <option value="12 : 00 PM">12 : 00 PM</option>
+                        <option value="13 : 00 PM">13 : 00 PM</option>
+                        <option value="14 : 00 PM">14 : 00 PM</option>
+                        <option value="15 : 00 PM">15 : 00 PM</option>
+                        <option value="16 : 00 PM">16 : 00 PM</option>
+                        <option value="17 : 00 PM">17 : 00 PM</option>
+                        <option value="18 : 00 PM">18 : 00 PM</option>
+                        <option value="19 : 00 PM">19 : 00 PM</option>
+                        <option value="20 : 00 PM">20 : 00 PM</option>
+                        <option value="21 : 00 PM">21 : 00 PM</option>
+                        <option value="22 : 00 PM">22 : 00 PM</option>
+                        <option value="23 : 00 PM">23 : 00 PM</option>
                       </select>
                     </div>
 
@@ -306,14 +215,14 @@
                       <select
                         class="form-select"
                         aria-label="Default select example"
+                        id="alarm_two"
                       >
-                        <!-- <option selected>Open this select menu</option> -->
-                        <option value="1">5 นาที</option>
-                        <option value="2">10 นาที</option>
-                        <option value="3">15 นาที</option>
-                        <option value="4">20 นาที</option>
-                        <option value="5">25 นาที</option>
-                        <option value="6">30 นาที</option>
+                        <option value="5 นาที">5 นาที</option>
+                        <option value="10 นาที">10 นาที</option>
+                        <option value="15 นาที">15 นาที</option>
+                        <option value="20 นาที">20 นาที</option>
+                        <option value="25 นาที">25 นาที</option>
+                        <option value="30 นาที">30 นาที</option>
                       </select>
                     </div>
 
@@ -321,7 +230,7 @@
                       <p>
                         *ระยะเวลาในการออกกำลังกายขึ้นอยู่กับระดับอาการของคุณ
                       </p>
-                      <!-- <select
+                      <select
                         class="form-select"
                         aria-label="Default select example"
                       >
@@ -329,23 +238,24 @@
                         <option value="2">3 นาที</option>
                         <option value="3">4 นาที</option>
                         <option value="4">5 นาที</option>
-                      </select> -->
+                      </select>
                     </div>
-                  </div>
+                  </div> -->
 
-                  <div class="startExercise">
+                  <!-- <div class="startExercise">
                     <a href="#"><button>รอเวลาออกกำลังกาย</button></a>
                   </div>
-                  <hr class="hrEnd" />
+                  <hr /> -->
+                  <!-- <hr class="hrEnd" /> -->
                 </div>
               </div>
             </div>
 
-            <div class="addExercise">
+            <!-- <div class="addExercise">
               <button>
                 <i class="fa-solid fa-plus"></i> เพิ่มจำนวนครั้งในการออกกำลังกาย
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -356,8 +266,129 @@
         <img src="./src/img/logo2NT.png" alt="" />
       </div>
       <div class="ads">
-        <p>2022 SNP .All Rights Reswrved</p>
+        <p>2022 SNP .All Rights Reserved</p>
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    let username = document.getElementById("user_name");
+    let get_user = localStorage.getItem("username");
+    username.append(get_user);
+
+    $("#user_name").click(function(){
+      localStorage.removeItem("username");
+      window.location.replace("./login.html");
+    })
+
+    var dateInput1 = document.getElementById("date_one");
+    // var dateInput2 = document.getElementById("date_two");
+
+    dateInput1.addEventListener("input", function (event) {
+      var selectedDate = new Date(event.target.value);
+      var currentTime = new Date();
+      var year = selectedDate.getFullYear();
+      var month = ("0" + (selectedDate.getMonth() + 1)).slice(-2);
+      var date = ("0" + selectedDate.getDate()).slice(-2);
+
+      var hours = ("0" + currentTime.getHours()).slice(-2);
+      var minutes = ("0" + currentTime.getMinutes()).slice(-2);
+      var seconds = ("0" + currentTime.getSeconds()).slice(-2);
+
+      var datetimeString =
+        year +
+        "-" +
+        month +
+        "-" +
+        date +
+        "T" +
+        hours +
+        ":" +
+        minutes +
+        ":" +
+        seconds +
+        ".000Z";
+
+      console.log("Date1: " + datetimeString);
+    });
+
+    $(document).ready(function () {
+      $("#time_one").change(function () {
+        console.log($(this).val());
+      });
+      $("#alarm_one").change(function () {
+        console.log($(this).val());
+      });
+      // $("#time_two").change(function () {
+      //   console.log($(this).val());
+      // });
+      // $("#alarm_two").change(function () {
+      //   console.log($(this).val());
+      // });
+    });
+
+    let btn_save = $("#save")
+    btn_save.click(function (){
+       let get_date = dateInput1.value;
+       let get_time = $("#time_one").val();
+       let get_alarm = $("#alarm_one").val();
+
+      let time_cut = get_time.replace(" AM", "");
+      console.log(time_cut);
+      var hours = time_cut.substring(0, 4);
+      var minutes = time_cut.substring(4);
+      var send_time = hours + minutes;
+
+      let new_hour = parseInt(hours);
+      let new_minute = parseInt(minutes);
+      let send_alarm = parseInt(get_alarm.replace(" นาที", ""));
+      let time_dif = parseInt(new_minute) - send_alarm;
+ 
+      let time_hour = new_hour-1;
+      let time_min = 60 + time_dif;
+      let time_noti = "0"+time_hour+" : "+time_min;
+      console.log(time_noti);
+
+       let data = {
+          "date": get_date,
+          "time": send_time,
+          "alarm": time_noti
+       }
+        console.table(data)
+      $.ajax({
+        method: "POST",
+        url: "http://localhost:428/test/line-notification.php",
+        data: {
+          "date": get_date,
+          "time": send_time,
+          "alarm": time_noti
+       },
+        success: function (response) {
+          console.log(response);
+          if (response == "success") {
+            Swal.fire({
+              position: 'top-center',
+              icon: 'success',
+              title: 'ส่งการแจ้งเตือนสำเร็จแล้ว',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          } else{
+            Swal.fire({
+              icon: 'error',
+              title: 'ขออภัย...',
+              text: 'ไม่สามารถส่งการแจ้งเตือนได้'
+            })
+          }
+          
+        },
+      });
+    })
+  </script>
 </html>

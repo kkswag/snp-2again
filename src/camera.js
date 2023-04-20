@@ -74,7 +74,8 @@ const COLOR_PALETTE = [
 export class Camera {
   constructor() {
     this.isLeft = false;
-    // this.isRight = false;
+    this.isRight = false;
+
     this.video = document.getElementById("video");
     this.canvas = document.getElementById("output");
     this.ctx = this.canvas.getContext("2d");
@@ -87,12 +88,34 @@ export class Camera {
     this.scatterGLHasInitialized = false;
   }
 
-  static getIsLeft() {
+  static getDrawPosesOneLeft() {
     this.isLeft;
   }
-  // static getIsRight() {
-  //   this.isRight;
-  // }
+  static getDrawPosesOneRight() {
+    this.isRight;
+  }
+  static getDrawPosesTwoLeft() {
+    this.isTwoLeft;
+  }
+  static getDrawPosesTwoRight() {
+    this.isTwoRight;
+  }
+  static getDrawPosesThreeLeft() {
+    this.isThreeLeft;
+  }
+  static getDrawPosesThreeRight() {
+    this.isThreeRight;
+  }
+  static getDrawPosesFourLeft() {
+    this.isFourLeft;
+  }
+  static getDrawPosesFourRight() {
+    this.isFourRight;
+  }
+  static getDrawPosesFive() {
+    this.isFive;
+  }
+
 
   /**
    * Initiate a Camera instance and wait for the camera stream to be ready.
@@ -179,31 +202,119 @@ export class Camera {
    * Draw the keypoints and skeleton on the video.
    * @param poses A list of poses to render.
    */
-  drawResults(poses) {
+
+
+  // <------- หันซ้าย ------->
+  drawPosesOneLeft(poses) {
     for (const pose of poses) {
       this.drawResult(pose);
-      //console.log("LOG: ", pose["keypoints"]);
-      if (pose["keypoints"][0]["x"] > 400) {
+      // console.log("LOG: ", pose["keypoints"]);
+      if (pose["keypoints"][0]["x"] > 380) {
         this.isLeft = true;
-      } else {
+      }else {
         this.isLeft = false;
       }
     }
   }
+    // <------- หันขวา ------->
+  drawPosesOneRight(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+      if (pose["keypoints"][0]["x"] < 280) {
+        this.isRight = true;
+      }else {
+        this.isRight = false;
+      }
+    }
+  }
 
-  // drawResults(poses) {
-  //   for (const pose of poses) {
-  //     this.drawResult(pose);
-  //     if (pose["keypoints"][0]["x"] > 400) {
-  //       this.isLeft = true;
-  //     } else if (pose["keypoints"][0]["x"] < 250) {
-  //       this.isRight = true;
-  //     } else {
-  //       this.isLeft = false;
-  //       this.isRight = false;
-  //     }
-  //   }
-  // }
+  // <------- เอียงซ้าย ------->
+  drawPosesTwoLeft(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+      if (pose["keypoints"][3]["y"] > 200 ) {
+        this.isTwoLeft = true;
+      }else {
+        this.isTwoLeft = false;
+      }
+    }
+  }
+    // <------- เอียงขวา ------->
+  drawPosesTwoRight(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+      if (pose["keypoints"][4]["y"] > 200) {
+        this.isTwoRight = true;
+      }else {
+        this.isTwoRight = false;
+      }
+    }
+  }
+
+  // <------- ไหล่ซ้าย ------->
+  drawPosesThreeLeft(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+      
+      if (pose["keypoints"][5]["y"] < 290) {
+        this.isThreeLeft = true;
+      }else {
+        this.isThreeLeft = false;
+      }
+    }
+  }
+    // <------- ไหล่ขวา------->
+  drawPosesThreeRight(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+     
+      if (pose["keypoints"][6]["y"] < 290) {
+        this.isThreeRight = true;
+      }else {
+        this.isThreeRight = false;
+      }
+    }
+  }
+
+  // <------- ข้อศอกซ้าย ------->
+  drawPosesFourLeft(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+      
+      if (pose["keypoints"][7]["y"] < 80) {
+        this.isFourLeft = true;
+      }else {
+        this.isFourLeft = false;
+      }
+    }
+  }
+    // <------- ช้อศอกขวา------->
+  drawPosesFourRight(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+    
+      if (pose["keypoints"][8]["y"] < 80) {
+        this.isFourRight = true;
+      }else {
+        this.isFourRight = false;
+      }
+    }
+  }
+
+  // <------- ข้อมือ ------->
+  drawPosesFive(poses) {
+    for (const pose of poses) {
+      this.drawResult(pose);
+      
+      if (pose["keypoints"][9]["y"] < 130) {
+        this.isFive = true;
+      }else {
+        this.isFive = false;
+      }
+    }
+  }
+
+
 
   /**
    * Draw the keypoints and skeleton on the video.
