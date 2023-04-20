@@ -182,7 +182,7 @@ export class Camera {
   drawResults(poses) {
     for (const pose of poses) {
       this.drawResult(pose);
-      console.log("LOG: ", pose["keypoints"]);
+      //console.log("LOG: ", pose["keypoints"]);
       if (pose["keypoints"][0]["x"] > 400) {
         this.isLeft = true;
       } else {

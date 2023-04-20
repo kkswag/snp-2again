@@ -19,6 +19,7 @@ import "@tensorflow/tfjs-backend-webgl";
 import * as mpPose from "@mediapipe/pose";
 
 import * as tfjsWasm from "@tensorflow/tfjs-backend-wasm";
+import sound from "../src/sound/DingSound.mp3";
 
 tfjsWasm.setWasmPaths(
   `https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@${tfjsWasm.version_wasm}/dist/`
@@ -31,6 +32,7 @@ import { setupDatGui } from "./option_panel";
 import { STATE } from "./params";
 import { setupStats } from "./stats_panel";
 import { setBackendAndEnvFlags } from "./util";
+import { clearWebGLContext } from "@tensorflow/tfjs-backend-webgl/dist/canvas_util";
 
 let detector, camera, stats;
 let startInferenceTime,
@@ -189,19 +191,43 @@ async function renderResult() {
 function setTimerInterval() {
   window.setInterval(setTime, 1000);
 }
-
 function setTime() {
   if (camera.isLeft) {
     ++totalSeconds;
     if (totalSeconds == 5) {
-      result.innerHTML = "Result: PASS";
+      setID.innerHTML = "1: ";
+      let ding = new Audio(sound);
+      ding.play();
+      $(".circle").css("background-color", "#63e336");
+      var btn_save =
+        '<div class="col-12 mt-3"><a href="./follow.html"><button class="updateExcerise btn btn-success" onclick="upload()">ยืนยัน</button></a></div>';
+
+      $("#show_btn").append(btn_save);
     }
+    // } else if (totalSeconds != 5) {
+    //   setID.innerHTML = "1: unsuccessful";
+    //   alert("Try agian!");
+    // }
     timer.innerHTML = pad(totalSeconds % 60);
   } else {
     totalSeconds = 0;
     timer.innerHTML = "00";
   }
 
+  // <------ use ------>
+  // function setTime() {
+  //   if (camera.isLeft) {
+  //     ++totalSeconds;
+  //     if (totalSeconds == 5) {
+  //       result.innerHTML = "Result: PASS";
+  //     }
+  //     timer.innerHTML = pad(totalSeconds % 60);
+  //   } else {
+  //     totalSeconds = 0;
+  //     timer.innerHTML = "00";
+  //   }
+
+  // <------ test ------>
   // if (camera.isRight) {
   //   ++totalSeconds;
   //   if (totalSeconds == 5) {

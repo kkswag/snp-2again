@@ -33,7 +33,7 @@
       <div class="nav">
         <div class="left">
           <div class="logo">
-            <img src="./src/img/logo.png" alt="" />
+            <img src="./src/img/logo2.png" alt="" />
           </div>
 
           <div class="menu">
@@ -45,7 +45,7 @@
         </div>
 
         <div class="username">
-          <a href="./login.html"><p>ละมุด</p></a>
+          <a href="./login.html"><p>Natnicha</p></a>
         </div>
       </div>
     </header>
@@ -76,23 +76,26 @@
         <div id="wrap">
           <div class="headST">
             <h1>อาการเบื้องต้น</h1>
-            <button>ข้าม <i class="fa-solid fa-chevron-right"></i></button>
+            <!-- <button>ข้าม <i class="fa-solid fa-chevron-right"></i></button> -->
           </div>
 
           <!-- head-form -->
           <div class="detailIniST">
             <div class="headPart">
-              <h1>ส่วนศีรษะ</h1>
+              <h1>ส่วนศีรษะ (1/4)</h1>
               <h2>อาการปวดหัวไมเกรน</h2>
             </div>
 
             <div class="headForm">
               <div class="form-check-1">
                 <input
-                  class="form-check-input"
+                  class="form-check-input headRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault1"
+                  id="headForm_1"
+                  value="level 4"
+                  checked
+                  onclick="add1(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault1">
                   ปวดรุนแรงเป็นประจำ
@@ -100,11 +103,12 @@
               </div>
               <div class="form-check-2">
                 <input
-                  class="form-check-input"
+                  class="form-check-input headRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault1"
+                  id="headForm_3"
+                  value="level 2"
+                  onclick="add1(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault2">
                   ปวดไม่รุนแรง แต่ปวดเป็นประจำ
@@ -112,35 +116,40 @@
               </div>
               <div class="form-check-3">
                 <input
-                  class="form-check-input"
+                  class="form-check-input headRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault1"
+                  id="headForm_5"
+                  value="level 0"
+                  onclick="add1(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault3">
                   ไม่มีอาการปวด
                 </label>
               </div>
               <div class="form-check-4">
                 <input
-                  class="form-check-input"
+                  class="form-check-input headRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault1"
+                  id="headForm_2"
+                  value="level 3"
+                  onclick="add1(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault4">
                   ปวดรุนแรง นานๆครั้ง
                 </label>
               </div>
               <div class="form-check-5">
                 <input
-                  class="form-check-input"
+                  class="form-check-input headRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault1"
+                  id="headForm_4"
+                  value="level 1"
+                  onclick="add1(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault5">
                   ปวดไม่รุนแรง นานๆครั้ง
                 </label>
               </div>
@@ -151,65 +160,74 @@
           <!-- neck-form -->
           <div class="detailIniST">
             <div class="headPart">
-              <h1>ส่วนคอ</h1>
+              <h1>ส่วนคอ (2/4)</h1>
               <h2>อาการปวด ตึงคอ</h2>
             </div>
 
             <div class="shoulderForm">
-              <div class="form-check">
+              <div class="form-check-6">
                 <input
-                  class="form-check-input"
+                  class="form-check-input neckRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault2"
+                  id="neckForm1"
+                  value="level 4"
+                  checked
+                  onclick="add2(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault6">
                   ปวดรุนแรงเป็นประจำ
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-7">
                 <input
-                  class="form-check-input"
+                  class="form-check-input neckRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault2"
+                  id="neckForm3"
+                  value="level 2"
+                  onclick="add2(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault7">
                   ปวดไม่รุนแรง แต่ปวดเป็นประจำ
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-8">
                 <input
-                  class="form-check-input"
+                  class="form-check-input neckRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault2"
+                  id="neckForm5"
+                  value="level 0"
+                  onclick="add2(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault8">
                   ไม่มีอาการปวด
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-9">
                 <input
-                  class="form-check-input"
+                  class="form-check-input neckRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault2"
+                  id="neckForm2"
+                  value="level 3"
+                  onclick="add2(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault9">
                   ปวดรุนแรง นานๆครั้ง
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-10">
                 <input
-                  class="form-check-input"
+                  class="form-check-input neckRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault2"
+                  id="neckForm4"
+                  value="level 1"
+                  onclick="add2(event)"
                 />
-                <label class="form-check-label" for="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault10">
                   ปวดไม่รุนแรง นานๆครั้ง
                 </label>
               </div>
@@ -220,63 +238,72 @@
           <!-- shoulder-form -->
           <div class="detailIniST">
             <div class="headPart">
-              <h1>ส่วนไหล่</h1>
+              <h1>ส่วนไหล่ (3/4)</h1>
               <h2>อาการปวด ตึงไหล่</h2>
             </div>
 
             <div class="shoulderForm">
-              <div class="form-check">
+              <div class="form-check-11">
                 <input
-                  class="form-check-input"
+                  class="form-check-input shoulderRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault3"
+                  id="shoulderForm1"
+                  value="level 4"
+                  checked
+                  onclick="add3(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault1">
                   ปวดรุนแรงเป็นประจำ
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-12">
                 <input
-                  class="form-check-input"
+                  class="form-check-input shoulderRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault3"
+                  id="shoulderForm3"
+                  value="level 2"
+                  onclick="add3(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault2">
                   ปวดไม่รุนแรง แต่ปวดเป็นประจำ
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-13">
                 <input
-                  class="form-check-input"
+                  class="form-check-input shoulderRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault3"
+                  id="shoulderForm5"
+                  value="level 0"
+                  onclick="add3(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault1">
                   ไม่มีอาการปวด
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-14">
                 <input
-                  class="form-check-input"
+                  class="form-check-input shoulderRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault3"
+                  id="shoulderForm2"
+                  value="level 3"
+                  onclick="add3(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault2">
                   ปวดรุนแรง นานๆครั้ง
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-15">
                 <input
-                  class="form-check-input"
+                  class="form-check-input shoulderRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault3"
+                  id="shoulderForm4"
+                  value="level 1"
+                  onclick="add3(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault1">
                   ปวดไม่รุนแรง นานๆครั้ง
@@ -289,64 +316,73 @@
           <!-- sabak-form -->
           <div class="detailIniST">
             <div class="headPart">
-              <h1>ส่วนสะบัก</h1>
+              <h1>ส่วนสะบัก (4/4)</h1>
               <h2>อาการปวด ตึงสะบัก</h2>
             </div>
 
             <!-- sabak-form -->
             <div class="shoulder2Form">
-              <div class="form-check">
+              <div class="form-check-16">
                 <input
-                  class="form-check-input"
+                  class="form-check-input sabakRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault4"
+                  id="sabakForm1"
+                  value="level 4"
+                  checked
+                  onclick="add4(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault1">
                   ปวดรุนแรงเป็นประจำ
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-17">
                 <input
-                  class="form-check-input"
+                  class="form-check-input sabakRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault4"
+                  id="sabakForm3"
+                  value="level 2"
+                  onclick="add4(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault2">
                   ปวดไม่รุนแรง แต่ปวดเป็นประจำ
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-18">
                 <input
-                  class="form-check-input"
+                  class="form-check-input sabakRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault4"
+                  id="sabakForm5"
+                  value="level 0"
+                  onclick="add4(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault1">
                   ไม่มีอาการปวด
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-19">
                 <input
-                  class="form-check-input"
+                  class="form-check-input sabakRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  name="flexRadioDefault4"
+                  id="sabakForm2"
+                  value="level 3"
+                  onclick="add4(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault2">
                   ปวดรุนแรง นานๆครั้ง
                 </label>
               </div>
-              <div class="form-check">
+              <div class="form-check-20">
                 <input
-                  class="form-check-input"
+                  class="form-check-input sabakRadio"
                   type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
+                  name="flexRadioDefault4"
+                  id="sabakForm4"
+                  value="level 2"
+                  onclick="add4(event)"
                 />
                 <label class="form-check-label" for="flexRadioDefault1">
                   ปวดไม่รุนแรง นานๆครั้ง
@@ -357,12 +393,14 @@
           </div>
         </div>
         <div class="summit-btton">
-          <button>ยืนยัน</button>
+          <a href="./exerTime.html"
+            ><button class="btInitialS">ยืนยัน</button></a
+          >
         </div>
 
         <footer>
           <div class="logoFooter">
-            <img src="./src/img/logo.png" alt="" />
+            <img src="./src/img/logo2NT.png" alt="" />
           </div>
           <div class="ads">
             <p>2022 SNP .All Rights Reswrved</p>
@@ -372,4 +410,63 @@
     </section>
   </body>
   <!-- <script src="./btQRclose.js"></script> -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin=" anonymous "
+    referrerpolicy="no-referrer "
+  ></script>
+  <script>
+    var inputH = document.querySelectorAll(".headRadio");
+    var inputN = document.querySelectorAll(".neckRadio");
+    var inputS = document.querySelectorAll(".shoulderRadio");
+    var inputSA = document.querySelectorAll(".sabakRadio");
+
+    var headValue;
+    var neckValue;
+    var shoulderValue;
+    var sabakValue;
+
+    const data = {
+      value1: "",
+      value2: "",
+      value3: "",
+      value4: "",
+    };
+
+    function add1(e) {
+      console.log(e.target.value);
+      data.value1 = e.target.value;
+    }
+    function add2(e) {
+      console.log(e.target.value);
+      data.value2 = e.target.value;
+    }
+    function add3(e) {
+      console.log(e.target.value);
+      data.value3 = e.target.value;
+    }
+    function add4(e) {
+      console.log(e.target.value);
+      data.value4 = e.target.value;
+    }
+
+    $(".btInitialS").click(function () {
+      const ar = JSON.stringify(Array.from(Object.values(data)));
+      $.ajax({
+        method: "POST",
+        url: "http://localhost:428/test/initial_symptom.php",
+        data: {
+          ar: ar,
+        },
+        success: function (response) {
+          console.log("s", response);
+        },
+        error: function (response) {
+          console.log(response);
+        },
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </html>

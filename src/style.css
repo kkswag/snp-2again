@@ -5,9 +5,10 @@ body {
   width: 100%;
   height: auto;
   margin: 0 auto;
+  font-family: prompt;
 }
 .logoFooter img {
-  width: 70px;
+  width: 55px;
   padding-top: 15px;
 }
 header {
@@ -35,8 +36,8 @@ header {
   padding-top: 15px;
 }
 .logo img {
-  width: 140px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
 }
 .menu {
   display: flex;
@@ -46,7 +47,7 @@ header {
   /* flex-basis: 80%; */
 }
 .menu a,
-.username p {
+.username a {
   font-family: "Prompt";
   color: white;
   padding-left: 25px;
@@ -55,17 +56,77 @@ header {
 .menu a:nth-child(2) {
   /* text-decoration: underline; */
 }
-/* #app {
+#app {
   margin-top: 40px;
   display: flex;
   justify-content: center;
-} */
-/* canvas {
-    align-items: center;
-  } */
+}
+canvas {
+  align-items: center;
+}
 .container {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+}
+
+/* .showfail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff5c5c;
+  margin-left: 10px;
+}
+#sectioncamera {
+  height: 623px;
+  display: flex;
+  align-items: center;
+}
+.linecircle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.cropSet {
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cropSet p:nth-child(1),
+.cropSet p:nth-child(2) {
+  font-weight: bold;
+  font-size: 20px;
+}
+.cropDes {
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headDes p {
+  font-size: 20px;
+}
+.howto h1 {
+  font-size: 22px;
+  padding: 15px 0;
+}
+.subHowto p {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  line-height: 20px;
+  text-align: left;
+}
+#show_btn {
+  text-align: center;
 }
 
 /* ------------- section home ------------- */
@@ -143,7 +204,7 @@ header {
   font-size: 30px;
   flex-basis: 90%;
   text-align: center;
-  padding-left: 75px;
+  /* padding-left: 75px; */
 }
 
 .headST button {
@@ -249,13 +310,18 @@ footer .ads {
   /* z-index: 99; */
   position: relative;
 }
-.login {
+.loginIm {
   width: 1000px;
   text-align: center;
   margin-top: 40px;
   font-family: dm sans;
   color: #823051;
   font-size: 25px;
+}
+.loginIm img {
+  width: 197px;
+  height: 200px;
+  margin-bottom: 100px;
 }
 .login img {
   width: 250px;
@@ -403,7 +469,7 @@ footer .ads {
   margin: 50px 0;
 }
 .cropboxTime {
-  background-color: #9979ad;
+  background-color: #c9b2d7;
   border-radius: 50px;
   height: 1200px;
   margin-bottom: 100px;
@@ -430,7 +496,7 @@ footer .ads {
   align-items: center;
   justify-content: space-evenly;
   font-family: dm sans;
-  color: #393939;
+  color: #032e58;
   font-size: 22px;
 }
 .fHeadTime p:nth-child(1) {
