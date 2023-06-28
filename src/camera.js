@@ -157,6 +157,7 @@ export class Camera {
       };
     });
 
+    //เรียกใช้กล้อง
     camera.video.play();
 
     const videoWidth = camera.video.videoWidth;

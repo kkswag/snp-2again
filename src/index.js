@@ -20,7 +20,7 @@ import * as mpPose from "@mediapipe/pose";
 
 import * as tfjsWasm from "@tensorflow/tfjs-backend-wasm";
 import sound from "../src/sound/DingSound.mp3";
-import countSound from "../src/sound/soundCountDown.mp3";
+// import countSound from "../src/sound/soundCountDown.mp3";
 
 tfjsWasm.setWasmPaths(
   `https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-wasm@${tfjsWasm.version_wasm}/dist/`
@@ -278,6 +278,7 @@ function setTime() {
     $('#poseEx3').hide()
     $('#poseEx4').show()
     turnRight();
+    shButton();
   
   } else if (!isThreeLeftDone && camera.isThreeLeft && isRightDone == true) {
     direction.innerHTML = "Step 1: ยกแขนซ้ายพาดไหล่ขวา";
@@ -300,7 +301,7 @@ function setTime() {
     $('#poseEx7').hide()
     $('#poseEx8').show()
     turnRightFour(); 
-    shButton();
+    
     
   }
   // else if (!isFiveDone && camera.isFive && isFiveDone == true) {
@@ -314,8 +315,17 @@ function setTime() {
 }
 
 
+// function shButton(){
+//   if(isFourRightDone && camera.isFourRight && isFourLeftDone == true){
+//     var btn_save =
+//     '<div class="col-12 mt-3"><a ><button class="updateExcerise btn btn-success" onclick="upload()">ยืนยัน</button></a></div>';
+    
+//     $("#show_btn").append(btn_save);
+//   }
+// }
+
 function shButton(){
-  if(isFourRightDone && camera.isFourRight && isFourLeftDone == true){
+  if(isRightDone && camera.isRight && isLeftDone == true){
     var btn_save =
     '<div class="col-12 mt-3"><a ><button class="updateExcerise btn btn-success" onclick="upload()">ยืนยัน</button></a></div>';
     
@@ -331,13 +341,13 @@ function turnLeftTwo(){
   
     //tick.play();
     ++totalSeconds;
-    if (totalSeconds == 5) {
+    if (totalSeconds == 2) {
       //tick.pause();
       set_one.innerHTML = "ท่าที่ 1 step 1: ";
       let ding = new Audio(sound);
       ding.play();
       $(".circle_one").css("background-color", "#63e336");
-      console.log("state two success");
+      // console.log("state two success");
       isTwoLeftDone = true;
       direction.innerHTML = "Step 2: เอียงคอไปทางขวา";
       $('#poseEx1').hide()
@@ -347,7 +357,6 @@ function turnLeftTwo(){
       timer.innerHTML = "00 วินาที";
     }
 
-    
     timer.innerHTML = pad(totalSeconds % 60+" วินาที");
   }
 }
@@ -357,7 +366,7 @@ function turnRightTwo(){
     direction.innerHTML = "Step 2: เอียงคอไปทางขวา";
     //tick.play();
     ++totalSeconds;
-    if (totalSeconds == 5) {
+    if (totalSeconds == 2) {
       //tick.pause();
       set_one.innerHTML = "ท่าที่ 1 step 2: ";
       let ding = new Audio(sound);
@@ -383,13 +392,13 @@ function turnLeft(){
     direction.innerHTML = "Step 1: หันหน้าไปทางซ้าย";
     ++totalSeconds;
 
-    if (totalSeconds == 5) {
+    if (totalSeconds == 2) {
       //tick.pause();
       set_two.innerHTML = "ท่าที่ 2 step 1: ";
       let ding = new Audio(sound);
       ding.play();
       $(".circle_three").css("background-color", "#63e336");
-      console.log("state one success");
+      // console.log("state one success");
       isLeftDone = true;
       direction.innerHTML = "Step 2: หันหน้าไปทางขวา";
       $('#poseEx3').hide()
@@ -409,7 +418,7 @@ function turnRight(){
     direction.innerHTML = "Step 2: หันหน้าไปทางขวา";
     //tick.play();
     ++totalSeconds;
-    if (totalSeconds == 5) {
+    if (totalSeconds == 2) {
       //tick.pause();
       set_two.innerHTML = "ท่าที่ 2 step 2: ";
       let ding = new Audio(sound);
