@@ -1,6 +1,5 @@
-<?php header("Access-Control-Allow-Origin: *");
-
-
+<?php 
+header("Access-Control-Allow-Origin: *");
 require_once "connect.php";
 
 
@@ -8,28 +7,21 @@ require_once "connect.php";
 $status = "success";
 $username = $_POST['username'];
 
-// echo "stat: ".$status."\nusername: ".$username;
-// echo gettype($status);
+$query = "SELECT id FROM users WHERE username = '$username'";
+$result = mysqli_query($conn, $query);
+$row = mysqli_fetch_assoc($result);
 
-// $data = "INSERT INTO symptom (username, stat) VALUES ('$username', '$status')" ;
+$user_id = $row['id'];
 
-// if ($db->query($data) === TRUE) {
-//   echo "New record created successfully";
-// } else {
-//   echo "Error: " . $data . "<br>" . $conn->error;
-// }
+$sql = "INSERT INTO symptom (user_id, stat) VALUES ('$user_id', '$status')";
+$insert = mysqli_query($conn, $sql);
 
-$stmt = $conn->prepare("INSERT INTO symptom (username, stat) VALUES (?, ?)");
-
-$stmt->bind_param("ss", $username, $status);
-
-if ($stmt->execute()) {
+if ($insert) {
   echo "success";
 } else {
-  echo "Error: " . $stmt->error;
+  echo "Error: " . $insert->error;
 }
 
-$stmt->close();
 $conn->close();
 
 ?>

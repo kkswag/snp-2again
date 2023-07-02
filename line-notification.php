@@ -1,16 +1,17 @@
 <?php
 header('Access-Control-Allow-Origin: *');
 
-
+	$user = $_POST['username'];
     $date = $_POST['date'];
     $time = $_POST['time'];
     $alarm = $_POST['alarm'];
 
-    //echo "date: ".$date."\ntime: ".$time."\nalarm in: ".$alarm;
+    // echo "user: ".$user." date: ".$date."\ntime: ".$time."\nalarm in: ".$alarm;
 
     $sToken = "4wYTVqLDBnR5DtIJLaVBYz86QmFBzS7wWdiX7Cq9Unw";
     // $sToken = "QIzjsQeQDvSVuN4MWizXeut69LAyDBFcQTk1quOPLbd";
-	$sMessage = "\nแจ้งเตือนเวลา: ".$alarm."\nแจ้งเตือนเวลาในการออกกำลังกาย"."\nปี-เดือน-วัน: ".$date."\nเวลาที่เริ่มออกกำลังกาย: ".$time;
+	
+	$sMessage = "แจ้งเตือนเวลาในการออกกำลังกาย"."\nโดยผู้ใช้: ".$user."\nแจ้งเตือนก่อนเวลา: ".$alarm." นาที"."\nปี-เดือน-วัน: ".$date."\nเวลาที่เริ่มออกกำลังกาย: ".$time;
 
 	
 	$chOne = curl_init(); 

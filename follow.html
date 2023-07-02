@@ -19,319 +19,266 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"
-      integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./src/style.css" />
     <title>Follow Symtom</title>
   </head>
   <body>
-    <header>
-      <div class="nav">
-        <div class="left">
-          <div class="logo">
-            <img src="./src/img/logo2.png" alt="" />
+    <div class="container-fluid px-0">
+      <header>
+        <div class="nav">
+          <div class="left">
+            <div class="logo">
+              <img src="./src/img/logo2.png" alt="" />
+            </div>
+  
+            <div class="menu">
+              <a href="./home.html">หน้าหลัก</a>
+              <a href="./exerTime.html">ออกกำลังกาย</a>
+              <a href="./follow.html">ติดตามอาการ</a>
+              <!-- <a href="./total.html">สรุปผล</a> -->
+            </div>
           </div>
-
-          <div class="menu">
-            <a href="./home.html">หน้าหลัก</a>
-            <a href="./exerTime.html">ออกกำลังกาย</a>
-            <a href="./follow.html">ติดตามอาการ</a>
-            <!-- <a href="./total.html">สรุปผล</a> -->
+  
+          <div class="username">
+            <p id="user_name"></p>
           </div>
         </div>
+      </header>
+    </div>
 
-        <div class="username">
-          <p id="user_name"></p>
+    <div class="container-fluid text-center mt-5">
+      <h1>ติดตามอาการ</h1>
+      <div class="row justify-content-center">
+        <div class="col-10 mt-5">
+          <h3>ส่วนศีรษะ</h3>
+          <h4 class="text-start">อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h4>
+            <div class="row justify-content-start mt-4">
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="headRadio" id="head-bad-state" value="1">
+                <label class="form-check-label ps-2" for="head-bad-state"> แย่ลง ปวดมากขึ้น</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="headRadio" id="head-normal-state" value="2">
+                <label class="form-check-label ps-2" for="head-normal-state"> ปวดเท่าเดิม</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="headRadio" id="head-better-state" value="3">
+                <label class="form-check-label ps-2" for="head-better-state"> ดีขึ้นเล็กน้อย</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="headRadio" id="head-perfect-state" value="4">
+                <label class="form-check-label ps-2" for="head-perfect-state"> ดีขึ้นอย่างมาก</label>
+              </div>
+            </div>
+            <p id="date-follow1" class="text-start pt-5"></p>
+            <hr>
         </div>
       </div>
-    </header>
-
-    <section>
-      <div class="sectionFollow">
-        <div id="wrap">
-            <div class="headFollow">
-                <h1>ติดตามอาการ</h1>
+      <div class="row justify-content-center">
+        <div class="col-10 mt-5">
+          <h3>ส่วนคอ</h3>
+          <h4 class="text-start">อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h4>
+            <div class="row justify-content-start mt-4">
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="neckRadio" id="neck-bad-state" value="1">
+                <label class="form-check-label ps-2" for="neck-bad-state"> แย่ลง ปวดมากขึ้น</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="neckRadio" id="neck-normal-state" value="2">
+                <label class="form-check-label ps-2" for="neck-normal-state"> ปวดเท่าเดิม</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="neckRadio" id="neck-better-state" value="3">
+                <label class="form-check-label ps-2" for="neck-better-state"> ดีขึ้นเล็กน้อย</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="neckRadio" id="neck-perfect-state" value="4">
+                <label class="form-check-label ps-2" for="neck-perfect-state"> ดีขึ้นอย่างมาก</label>
+              </div>
             </div>
-      
-              <!-- head-form -->
-              <div class="followhead">
-                  <div class="fHeadPart">
-                    <h1>ส่วนศีรษะ</h1>
-                    <h2>อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h2>
-                  </div>
-
-                  <div class="fHeadForm">
-                    <div class="form-check-1">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        แย่ลง ปวดมากขึ้น
-                      </label>
-                    </div>
-                    <div class="form-check-2">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
-                        checked
-                      />
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        ปวดเท่าเดิม
-                      </label>
-                    </div>
-                    <div class="form-check-3">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1"
-                      />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        ดีขึ้นเล็กน้อย
-                      </label>
-                    </div>
-                    <div class="form-check-4">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault2"
-                        checked
-                      />
-                      <label class="form-check-label" for="flexRadioDefault2">
-                        ดีขึ้นอย่างมาก
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="line">
-                    <p>อาการเมื่อวันที่ 7 มกราคม 2023 : ปวดเหมือนเดิม</p>
-                    <hr class="under-line-f" />
-                  </div>
-                </div>
-
-                <!-- neck-form -->
-            <div class="followneck">
-                <div class="fNeckPart">
-                  <h1>ส่วนคอ</h1>
-                  <h2>อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h2>
-                </div>
-
-                <div class="fNeckForm">
-                  <div class="form-check-1">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      แย่ลง ปวดมากขึ้น
-                    </label>
-                  </div>
-                  <div class="form-check-2">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      ปวดเท่าเดิม
-                    </label>
-                  </div>
-                  <div class="form-check-3">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      ดีขึ้นเล็กน้อย
-                    </label>
-                  </div>
-                  <div class="form-check-4">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      ดีขึ้นอย่างมาก
-                    </label>
-                  </div>
-                </div>
-
-                <div class="line">
-                  <p>อาการเมื่อวันที่ 7 มกราคม 2023 : ปวดเหมือนเดิม</p>
-                  <hr class="under-line-f" />
-                </div>
-            </div>
-
-             <!-- shoulder-form -->
-             <div class="followneck">
-                <div class="fShoulderPart">
-                  <h1>ส่วนไหล่</h1>
-                  <h2>อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h2>
-                </div>
-
-                <div class="fShoulderForm">
-                  <div class="form-check-1">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      แย่ลง ปวดมากขึ้น
-                    </label>
-                  </div>
-                  <div class="form-check-2">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      ปวดเท่าเดิม
-                    </label>
-                  </div>
-                  <div class="form-check-3">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      ดีขึ้นเล็กน้อย
-                    </label>
-                  </div>
-                  <div class="form-check-4">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      ดีขึ้นอย่างมาก
-                    </label>
-                  </div>
-                </div>
-
-                <div class="line">
-                  <p>อาการเมื่อวันที่ 7 มกราคม 2023 : ปวดเหมือนเดิม</p>
-                  <hr class="under-line-f" />
-                </div>
-            </div>
-
-            <!-- sabak-form -->
-            <div class="followneck">
-                <div class="fSabakPart">
-                  <h1>ส่วนสะบัก</h1>
-                  <h2>อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h2>
-                </div>
-
-                <div class="fSabakForm">
-                  <div class="form-check-1">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      แย่ลง ปวดมากขึ้น
-                    </label>
-                  </div>
-                  <div class="form-check-2">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      ปวดเท่าเดิม
-                    </label>
-                  </div>
-                  <div class="form-check-3">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      ดีขึ้นเล็กน้อย
-                    </label>
-                  </div>
-                  <div class="form-check-4">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      ดีขึ้นอย่างมาก
-                    </label>
-                  </div>
-                </div>
-
-                <div class="line">
-                  <p>อาการเมื่อวันที่ 7 มกราคม 2023 : ปวดเหมือนเดิม</p>
-                  <hr class="under-line-f" />
-                </div>
-            </div>
-
-            <div class="buttonSubmitF">
-                <a href="./total.html"><button class="submitF">ยืนยัน</button></a>
-            </div>
+            <p id="date-follow2" class="text-start pt-5"></p>
+            <hr>
         </div>
-    </section>
-
-    <footer>
-        <div class="logoFooter">
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10 mt-5">
+          <h3>ส่วนไหล่</h3>
+          <h4 class="text-start">อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h4>
+            <div class="row justify-content-start mt-4">
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="shoulderRadio" id="shoulder-bad-state" value="1" >
+                <label class="form-check-label ps-2" for="shoulder-bad-state"> แย่ลง ปวดมากขึ้น</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="shoulderRadio" id="shoulder-normal-state" value="2" >
+                <label class="form-check-label ps-2" for="shoulder-normal-state"> ปวดเท่าเดิม</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="shoulderRadio" id="shoulder-better-state" value="3" >
+                <label class="form-check-label ps-2" for="shoulder-better-state"> ดีขึ้นเล็กน้อย</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="shoulderRadio" id="shoulder-perfect-state" value="4" >
+                <label class="form-check-label ps-2" for="shoulder-perfect-state"> ดีขึ้นอย่างมาก</label>
+              </div>
+            </div>
+            <p id="date-follow3" class="text-start pt-5"></p>
+            <hr>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10 mt-5">
+          <h3>ส่วนสะบัก</h3>
+          <h4 class="text-start">อาการปวดเป็นอย่างไร (<span>รายละเอียดอาการ</span>) </h4>
+            <div class="row justify-content-start mt-4">
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="hipRadio" id="hip-bad-state" value="1">
+                <label class="form-check-label ps-2" for="hip-bad-state"> แย่ลง ปวดมากขึ้น</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="hipRadio" id="hip-normal-state" value="2">
+                <label class="form-check-label ps-2" for="hip-normal-state"> ปวดเท่าเดิม</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="hipRadio" id="hip-better-state" value="3">
+                <label class="form-check-label ps-2" for="hip-better-state"> ดีขึ้นเล็กน้อย</label>
+              </div>
+              <div class="col-3">
+                <input class="form-check-input" type="radio" name="hipRadio" id="hip-perfect-state" value="4">
+                <label class="form-check-label ps-2" for="hip-perfect-state"> ดีขึ้นอย่างมาก</label>
+              </div>
+            </div>
+            <p id="date-follow4" class="text-start pt-5"></p>
+            <hr>
+        </div>
+      </div>
+      <div class="row my-4 justify-content-center">
+        <div class="col-10">
+          <button id="btn-symptom" class="w-25">บันทึกผล</button>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid footer">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-6">
           <img src="./src/img/logo2NT.png" alt="" />
         </div>
-        <div class="ads">
-          <p>2022 SNP .All Rights Reserved</p>
+        <div class="col-6 text-end ps-3">
+          <p class="mb-0">2022 SNP .All Rights Reserved</p>
         </div>
-    </footer>
-
+      </div>
+    </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script>
-    let username = document.getElementById("user_name");
-    let get_user = localStorage.getItem("username");
-    username.append(get_user);
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    $("#user_name").click(function(){
-      localStorage.removeItem("username");
-      window.location.replace("./login.html");
-    })
-  </script>
+<script>
+  $(document).ready(function () {
+  let username = $("#user_name");
+  let get_user = localStorage.getItem("username");
+  username.append(get_user);
+
+  username.click(function() {
+    localStorage.removeItem("username");
+    window.location.replace("./login.html");
+  });
+
+  const currentDate = new Date();
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  const formattedDate = currentDate.toLocaleDateString('th-TH', options);
+  console.log(formattedDate);
+  
+  const dateFollowElements = document.querySelectorAll('#date-follow4, #date-follow3, #date-follow2, #date-follow1');
+  dateFollowElements.forEach(element => {
+    element.textContent = `อาการเมื่อวันที่ ${formattedDate}`;
+  });
+
+
+  var levels = {};
+
+  const headRadios = document.querySelectorAll('input[name="headRadio"]');
+  headRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      levels.head = $(this).val();
+      console.log("Section head: Level " + levels.head);
+    });
+  });
+
+  const neckRadios = document.querySelectorAll('input[name="neckRadio"]');
+  neckRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      levels.neck = $(this).val();
+      console.log("Section neck: Level " + levels.neck);
+    });
+  });
+
+  const shoulderRadios = document.querySelectorAll('input[name="shoulderRadio"]');
+  shoulderRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      levels.shoulder = $(this).val();
+      console.log("Section shoulder: Level " + levels.shoulder);
+    });
+  });
+
+  const hipRadios = document.querySelectorAll('input[name="hipRadio"]');
+  hipRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      levels.hip = $(this).val();
+      console.log("Section hip: Level " + levels.hip);
+    });
+  });
+
+  const btnSymptom = $('#btn-symptom');
+  btnSymptom.click(function() {
+    sendDataToPHP(levels);
+  });
+});
+
+function sendDataToPHP(data) {
+  let user = localStorage.getItem("username");
+  data.username = user;
+
+  $.ajax({
+    url: 'http://localhost:428/test/followSymptom.php',
+    type: 'POST',
+    data: data, // Send the data directly as an object
+    success: function(response) {
+      console.log(response);
+      if (response == "success") {
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'บันทึกข้อมูลสำเร็จ',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        setTimeout(() => {
+          window.location.href = '/home.html';
+        }, 1500);
+      } else {
+        Swal.fire({
+          position: 'top-center',
+          icon: 'error',
+          title: 'บันทึกข้อมูลไม่สำเร็จ',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
+      }
+    },
+    error: function(xhr, status, error) {
+      // Handle errors
+      console.error(error);
+    }
+  });
+}
+
+</script>
 </html>

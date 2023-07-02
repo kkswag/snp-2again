@@ -27,4 +27,29 @@ function setTime() {
     }
   }
 < -------------------------------------------------------------- >
+    <div class="loginPart">
+      <div class="background"></div>
+      <div class="loginIm">
+        <h1>WELLCOME</h1>
+        <img src="/logo2.cf598e60.png" alt="">
 
+        <div class="row">
+          <div class="loginForm">
+            <div class="userPart">
+              <lable for="usernameL" class="form-label w-100">USERNAME</lable>
+              <input type="text" name="usernameL" id="usernameL" class="form-control">
+            </div>
+
+            <div class="passwordPart">
+              <label for="passwordL" class="form-label w-100">PASSWORD</label>
+              <input type="password" name="passwordL" id="passwordL">
+            </div>
+            
+            <a href="/register.html">Register</a>
+          </div>
+
+          <a><button class="btLogin">LOGIN</button></a>
+        </div>
+
+      </div>
+    </div>

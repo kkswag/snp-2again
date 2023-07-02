@@ -111,7 +111,7 @@
       console.log("Password:", $("#pw").val());
       $.ajax({
         method: "POST",
-        url: "http://localhost:428/test/validate.php",
+        url: "./validate.php",
         data: {
           username: username,
           email: email,

@@ -52,24 +52,16 @@
       </div>
     </div>
   </body>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin=" anonymous "
-    referrerpolicy="no-referrer "
-  ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <script>
     $(".btLogin").click(function () {
-      // var username = $("#usernameL").val();
-      // var password = $("#passwordL").val();
-      // console.log("Username:", $("#usernameL").val());
-      // console.log("Password:", $("#passwordL").val());
       var username = document.getElementById("usernameL").value;
       var password = document.getElementById("passwordL").value;
       $.ajax({
         method: "POST",
-        url: "http://localhost:428/test/checkLogin.php",
+        url: "./checkLogin.php",
         data: {
           username: username,
           password: password,
@@ -77,15 +69,41 @@
         success: function (response) {
           console.log(response);
           if (response == "success") {
-            alert("login success");
-            localStorage.setItem("username",username);
-            window.location = "./home.html";
+            Swal.fire({
+              position: 'top-center',
+              icon: 'success',
+              title: 'บันทึกข้อมูลสำเร็จ',
+              showConfirmButton: false,
+              timer: 1500
+            })
+            setTimeout(() => {
+              window.location.href = '/home.html';
+              localStorage.setItem("username",username);
+            }, 1500);
           } else if (response == "Incorrect password") {
-            alert("Incorrect password");
-            window.location = "./login.html";
+              Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'รหัสผ่านผิด',
+                text: 'กรุณากรอกรหัสผ่านใหม่อีกครั้ง',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              setTimeout(() => {
+                window.location.reload();
+              }, 1500);
           } else if (response == "User not found") {
-            alert("User not found");
-            window.location = "./login.html";
+              Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'ไม่พบผู้ใช้งาน',
+                text: 'กรุณาลงทะเบียนเพื่อเข้าใช้งาน',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              setTimeout(() => {
+                window.location.href = '/register.html';
+              }, 1500);
           }
         },
       });

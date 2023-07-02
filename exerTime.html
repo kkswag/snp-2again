@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -29,366 +31,148 @@
     <title>Exercise Time</title>
   </head>
   <body>
-    <header>
-      <div class="nav">
-        <div class="left">
-          <div class="logo">
-            <img src="./src/img/logo2.png" alt="" />
+    <div class="container-fluid px-0">
+      <header>
+        <div class="nav">
+          <div class="left">
+            <div class="logo">
+              <img src="./src/img/logo2.png" alt="" />
+            </div>
+  
+            <div class="menu">
+              <a href="./home.html">หน้าหลัก</a>
+              <a href="./exerTime.html">ออกกำลังกาย</a>
+              <a href="./follow.html">ติดตามอาการ</a>
+              <!-- <a href="./total.html">สรุปผล</a> -->
+            </div>
           </div>
-
-          <div class="menu">
-            <a href="./home.html">หน้าหลัก</a>
-            <a href="">ออกกำลังกาย</a>
-            <a href="./follow.html">ติดตามอาการ</a>
-            <!-- <a href="./total.html">สรุปผล</a> -->
+  
+          <div class="username">
+            <p id="user_name"></p>
           </div>
         </div>
+      </header>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center my-5">
+        <div class="col-6">
+          <div class="box-noti text-center">
+            <h3>ช่วงเวลาการออกกำลังกาย</h3>
 
-        <div class="username">
-          <p id="user_name"></p>
-        </div>
-      </div>
-    </header>
-
-    <section>
-      <div class="selectTime">
-        <div class="headTime">
-          <h1>ช่วงเวลาการออกกำลังกาย</h1>
-        </div>
-        <div id="wrap">
-          <div class="cropboxTime">
-            <h1>คำแนะนำ : ควรเลือกช่วงเวลาอย่างน้อย 2 ช่วงขึ้นไป</h1>
-            <p>เลือกวันที่ในการออกกำลังกาย</p>
-            <input type="date" id="date_one"/>
-            <div class="boxTime">
-              <div class="leftTime">
-                <!-- <input type="date" id="date" /> -->
+            <h5>คำแนะนำ : ควรเลือกช่วงเวลาอย่างน้อย 2 ช่วงขึ้นไป</h5>
+            <div class="row my-4 justify-content-center">
+              <div class="col-6">
+                <label for="date_one" class="form-label text-center w-100">เลือกวัน และเวลาในการออกกำลังกาย</label>
+                <input type="datetime-local" id="date_one" class="form-control"/>
               </div>
-
-              <div class="rightTime">
-                <div class="fTime">
-                  <div class="fHeadTime">
-                    <p>ช่วงที่ 1</p>
-                    <!-- <p id="output_date"></p> -->
-                    <!-- <input type="date" id="date_one" /> -->
-
-                    <!-- <i class="fa-solid fa-gear"></i>
-                    <i class="fa-sharp fa-solid fa-trash"></i> -->
-                  </div>
-
-                  <div class="selectFirstET">
-                    <div class="seTime">
-                      <p>เลือกช่วงเวลา</p>
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
-                        id="time_one"
-                      >
-                        <!-- <option value="00 : 00 AM">00 : 00 AM</option>
-                        <option value="01 : 00 AM">01 : 00 AM</option>
-                        <option value="02 : 00 AM">02 : 00 AM</option>
-                        <option value="03 : 00 AM">03 : 00 AM</option>
-                        <option value="04 : 00 AM">04 : 00 AM</option> -->
-                        <option value="05 : 00 AM">05 : 00 AM</option>
-                        <option value="06 : 00 AM">06 : 00 AM</option>
-                        <option value="07 : 00 AM">07 : 00 AM</option>
-                        <option value="08 : 00 AM">08 : 00 AM</option>
-                        <option value="09 : 00 AM">09 : 00 AM</option>
-                        <option value="10 : 00 AM">10 : 00 AM</option>
-                        <option value="11 : 00 AM">11 : 00 AM</option>
-                        <option value="12 : 00 PM">12 : 00 PM</option>
-                        <option value="13 : 00 PM">13 : 00 PM</option>
-                        <option value="14 : 00 PM">14 : 00 PM</option>
-                        <option value="15 : 00 PM">15 : 00 PM</option>
-                        <option value="16 : 00 PM">16 : 00 PM</option>
-                        <option value="17 : 00 PM">17 : 00 PM</option>
-                        <option value="18 : 00 PM">18 : 00 PM</option>
-                        <option value="19 : 00 PM">19 : 00 PM</option>
-                        <option value="20 : 00 PM">20 : 00 PM</option>
-                        <!-- <option value="21 : 00 PM">21 : 00 PM</option>
-                        <option value="22 : 00 PM">22 : 00 PM</option>
-                        <option value="23 : 00 PM">23 : 00 PM</option> -->
-                      </select>
-                      <!-- <input
-                        type="time"
-                        id="time_one"
-                        name="time"
-                        min="00:00"
-                        max="23:59"
-                        step="1"
-                      /> -->
-                    </div>
-
-                    <div class="warnForwordF">
-                      <p>แจ้งเตือนล่วงหน้า</p>
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
-                        id="alarm_one"
-                      >
-                        <!-- <option selected>Open this select menu</option> -->
-                        <option value="5 นาที">5 นาที</option>
-                        <option value="10 นาที">10 นาที</option>
-                        <option value="15 นาที">15 นาที</option>
-                        <option value="20 นาที">20 นาที</option>
-                        <option value="25 นาที">25 นาที</option>
-                        <option value="30 นาที">30 นาที</option>
-                      </select>
-                    </div>
-
-                    <!-- <div class="timeForPerpost"> -->
-                      <!-- <p>
-                        *ระยะเวลาในการออกกำลังกายขึ้นอยู่กับระดับอาการของคุณ
-                      </p> -->
-                      <!-- <select
-                        class="form-select"
-                        aria-label="Default select example"
-                      >
-                        <option value="1">2 นาที</option>
-                        <option value="2">3 นาที</option>
-                        <option value="3">4 นาที</option>
-                        <option value="4">5 นาที</option>
-                      </select> -->
-                    <!-- </div> -->
-
-                  </div>
-
-                  <div class="tip">
-                    <p>
-                      *ระยะเวลาในการออกกำลังกายขึ้นอยู่กับระดับอาการของคุณ
-                    </p>
-                  </div>
-
-
-                  <div class="startExercise">
-                    <!-- <button>บันทึก</button> -->
-                    <button id="save">บันทึก</button>
-                    <a href="./index.html"><button class="startEx">เริ่มออกกำลังกาย</button></a>
-                  </div>
-
-                  <!-- <hr /> -->
-
-                  <!-- <div class="fHeadTime">
-                    <p>ช่วงที่ 2</p>
-                    <input type="date" id="date_two" />
-                    <i class="fa-solid fa-gear"></i>
-                    <i class="fa-sharp fa-solid fa-trash"></i>
-                  </div> -->
-
-                  <!-- <div class="selectFirstET">
-                    <div class="seTime">
-                      <p>เลือกช่วงเวลา</p>
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
-                        id="time_two"
-                      >
-                        <option value="00 : 00 AM">00 : 00 AM</option>
-                        <option value="01 : 00 AM">01 : 00 AM</option>
-                        <option value="02 : 00 AM">02 : 00 AM</option>
-                        <option value="03 : 00 AM">03 : 00 AM</option>
-                        <option value="04 : 00 AM">04 : 00 AM</option>
-                        <option value="05 : 00 AM">05 : 00 AM</option>
-                        <option value="06 : 00 AM">06 : 00 AM</option>
-                        <option value="07 : 00 AM">07 : 00 AM</option>
-                        <option value="08 : 00 AM">08 : 00 AM</option>
-                        <option value="09 : 00 AM">09 : 00 AM</option>
-                        <option value="10 : 00 AM">10 : 00 AM</option>
-                        <option value="11 : 00 AM">11 : 00 AM</option>
-                        <option value="12 : 00 PM">12 : 00 PM</option>
-                        <option value="13 : 00 PM">13 : 00 PM</option>
-                        <option value="14 : 00 PM">14 : 00 PM</option>
-                        <option value="15 : 00 PM">15 : 00 PM</option>
-                        <option value="16 : 00 PM">16 : 00 PM</option>
-                        <option value="17 : 00 PM">17 : 00 PM</option>
-                        <option value="18 : 00 PM">18 : 00 PM</option>
-                        <option value="19 : 00 PM">19 : 00 PM</option>
-                        <option value="20 : 00 PM">20 : 00 PM</option>
-                        <option value="21 : 00 PM">21 : 00 PM</option>
-                        <option value="22 : 00 PM">22 : 00 PM</option>
-                        <option value="23 : 00 PM">23 : 00 PM</option>
-                      </select>
-                    </div>
-
-                    <div class="warnForwordF">
-                      <p>เลือกแจ้งเตือนล่วงหน้า</p>
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
-                        id="alarm_two"
-                      >
-                        <option value="5 นาที">5 นาที</option>
-                        <option value="10 นาที">10 นาที</option>
-                        <option value="15 นาที">15 นาที</option>
-                        <option value="20 นาที">20 นาที</option>
-                        <option value="25 นาที">25 นาที</option>
-                        <option value="30 นาที">30 นาที</option>
-                      </select>
-                    </div>
-
-                    <div class="timeForPerpost">
-                      <p>
-                        *ระยะเวลาในการออกกำลังกายขึ้นอยู่กับระดับอาการของคุณ
-                      </p>
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
-                      >
-                        <option value="1">2 นาที</option>
-                        <option value="2">3 นาที</option>
-                        <option value="3">4 นาที</option>
-                        <option value="4">5 นาที</option>
-                      </select>
-                    </div>
-                  </div> -->
-
-                  <!-- <div class="startExercise">
-                    <a href="#"><button>รอเวลาออกกำลังกาย</button></a>
-                  </div>
-                  <hr /> -->
-                  <!-- <hr class="hrEnd" /> -->
-                </div>
-              </div>
+             
             </div>
 
-            <!-- <div class="addExercise">
-              <button>
-                <i class="fa-solid fa-plus"></i> เพิ่มจำนวนครั้งในการออกกำลังกาย
-              </button>
-            </div> -->
+            <h4>ช่วงที่ 1</h4>
+
+            <div class="warnForwordF my-4">
+              <label for="alarm_one" class="form-label">แจ้งเตือนล่วงหน้า</label>
+              <select class="form-select" aria-label="Default select example" id="alarm_one">
+                <option value="5 นาที">5 นาที</option>
+                <option value="10 นาที">10 นาที</option>
+                <option value="15 นาที">15 นาที</option>
+                <option value="20 นาที">20 นาที</option>
+                <option value="25 นาที">25 นาที</option>
+                <option value="30 นาที">30 นาที</option>
+              </select>
+            </div>
+            <p>*ระยะเวลาในการออกกำลังกายขึ้นอยู่กับระดับอาการของคุณ</p>
+            <div class="box-btn-alarm d-flex justify-content-evenly">
+              <button id="save">บันทึก</button>
+              <a href="./index.html"><button class="startEx">เริ่มออกกำลังกาย</button></a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <footer>
-      <div class="logoFooter">
-        <img src="./src/img/logo2NT.png" alt="" />
+    </div>
+    <div class="container-fluid footer mt-5 position-absolute bottom-0">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-6">
+          <img src="./src/img/logo2NT.png" alt="" />
+        </div>
+        <div class="col-6 text-end ps-3">
+          <p class="mb-0">2022 SNP .All Rights Reserved</p>
+        </div>
       </div>
-      <div class="ads">
-        <p>2022 SNP .All Rights Reserved</p>
-      </div>
-    </footer>
+    </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script>
-    let username = document.getElementById("user_name");
-    let get_user = localStorage.getItem("username");
-    username.append(get_user);
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script>
+const username = document.getElementById("user_name");
+const get_user = localStorage.getItem("username");
 
-    $("#user_name").click(function(){
-      localStorage.removeItem("username");
-      window.location.replace("./login.html");
-    })
+$(document).ready(function () {
+  username.append(get_user);
+  $("#user_name").click(function(){
+    localStorage.removeItem("username");
+    window.location.replace("./login.html");
+  });
+});
 
-    var dateInput1 = document.getElementById("date_one");
-    // var dateInput2 = document.getElementById("date_two");
+const saveButton = document.getElementById('save');
+const dateTimeInput = document.getElementById('date_one');
+const alarmInput = document.getElementById('alarm_one');
 
-    dateInput1.addEventListener("input", function (event) {
-      var selectedDate = new Date(event.target.value);
-      var currentTime = new Date();
-      var year = selectedDate.getFullYear();
-      var month = ("0" + (selectedDate.getMonth() + 1)).slice(-2);
-      var date = ("0" + selectedDate.getDate()).slice(-2);
+dateTimeInput.addEventListener("input", function (event) {
+  const selectedDate = new Date(event.target.value);
+  const year = selectedDate.getFullYear();
+  const month = ("0" + (selectedDate.getMonth() + 1)).slice(-2);
+  const date = ("0" + selectedDate.getDate()).slice(-2);
 
-      var hours = ("0" + currentTime.getHours()).slice(-2);
-      var minutes = ("0" + currentTime.getMinutes()).slice(-2);
-      var seconds = ("0" + currentTime.getSeconds()).slice(-2);
+  const dateString = year + "-" + month + "-" + date;
 
-      var datetimeString =
-        year +
-        "-" +
-        month +
-        "-" +
-        date +
-        "T" +
-        hours +
-        ":" +
-        minutes +
-        ":" +
-        seconds +
-        ".000Z";
+  console.log("Date1: " + dateString);
+});
 
-      console.log("Date1: " + datetimeString);
-    });
+saveButton.addEventListener('click', () => {
+  const dateTimeValue = dateTimeInput.value;
+  const [dateValue, timeValue] = dateTimeValue.split('T');
+  const alarmValue = alarmInput.value;
+  const timeNoti = parseInt(alarmValue.replace(" นาที", ""));
 
-    $(document).ready(function () {
-      $("#time_one").change(function () {
-        console.log($(this).val());
-      });
-      $("#alarm_one").change(function () {
-        console.log($(this).val());
-      });
-      // $("#time_two").change(function () {
-      //   console.log($(this).val());
-      // });
-      // $("#alarm_two").change(function () {
-      //   console.log($(this).val());
-      // });
-    });
+  const data = {
+    "username": get_user,
+    "date": dateValue, // Use dateValue instead of dateTimeValue
+    "time": timeValue,
+    "alarm": timeNoti
+  };
 
-    let btn_save = $("#save")
-    btn_save.click(function (){
-       let get_date = dateInput1.value;
-       let get_time = $("#time_one").val();
-       let get_alarm = $("#alarm_one").val();
+  console.log(data);
+  $.ajax({
+    type: "POST",
+    url: "http://localhost:428/test/line-notification.php",
+    data: data,
+    success: function (response) {
+      console.log(response);
+      if (response == "success") {
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'ส่งการแจ้งเตือนสำเร็จแล้ว',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        setTimeout(function (){
+          window.location.href = './index.html';
+        }, 1500);
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'ขออภัย...',
+          text: 'ไม่สามารถส่งการแจ้งเตือนได้'
+        })
+      }
+    }
+  });
 
-      let time_cut = get_time.replace(" AM", "");
-      console.log(time_cut);
-      var hours = time_cut.substring(0, 4);
-      var minutes = time_cut.substring(4);
-      var send_time = hours + minutes;
-
-      let new_hour = parseInt(hours);
-      let new_minute = parseInt(minutes);
-      let send_alarm = parseInt(get_alarm.replace(" นาที", ""));
-      let time_dif = parseInt(new_minute) - send_alarm;
- 
-      let time_hour = new_hour-1;
-      let time_min = 60 + time_dif;
-      let time_noti = "0"+time_hour+" : "+time_min;
-      console.log(time_noti);
-
-       let data = {
-          "date": get_date,
-          "time": send_time,
-          "alarm": time_noti
-       }
-        console.table(data)
-      $.ajax({
-        method: "POST",
-        url: "http://localhost:428/test/line-notification.php",
-        data: {
-          "date": get_date,
-          "time": send_time,
-          "alarm": time_noti
-       },
-        success: function (response) {
-          console.log(response);
-          if (response == "success") {
-            Swal.fire({
-              position: 'top-center',
-              icon: 'success',
-              title: 'ส่งการแจ้งเตือนสำเร็จแล้ว',
-              showConfirmButton: false,
-              timer: 1500
-            })
-          } else{
-            Swal.fire({
-              icon: 'error',
-              title: 'ขออภัย...',
-              text: 'ไม่สามารถส่งการแจ้งเตือนได้'
-            })
-          }
           
-        },
-      });
-    })
-  </script>
+  })
+</script>
 </html>

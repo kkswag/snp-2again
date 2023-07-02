@@ -412,29 +412,26 @@
           >
         </div> -->
         <div class="summit-btton">
-          <a href="./exerTime.html"
-            ><button class="btInitialS">ยืนยัน</button></a
-          >
+          <!-- <a href="./exerTime.html"> -->
+            <button class="btInitialS">ยืนยัน</button>
+          <!-- </a> -->
         </div>
-
-        <footer>
-          <div class="logoFooter">
-            <img src="./src/img/logo2NT.png" alt="" />
-          </div>
-          <div class="ads">
-            <p>2022 SNP .All Rights Reserved</p>
-          </div>
-        </footer>
       </div>
     </section>
+    <div class="container-fluid footer">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-6">
+          <img src="./src/img/logo2NT.png" alt="" />
+        </div>
+        <div class="col-6 text-end ps-3">
+          <p class="mb-0">2022 SNP .All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
   </body>
   <!-- <script src="./btQRclose.js"></script> -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin=" anonymous "
-    referrerpolicy="no-referrer "
-  ></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     let username = document.getElementById("user_name");
     let get_user = localStorage.getItem("username");
@@ -482,7 +479,7 @@
     $(".btInitialS").click(function () {
       const ar = JSON.stringify(Array.from(Object.values(data)));
       $.ajax({
-        method: "POST",
+        type: "POST",
         url: "http://localhost:428/test/initial_symptom.php",
         data: {
           ar: ar,
@@ -490,7 +487,29 @@
         },
         success: function (response) {
           console.log(response);
-          alert(response)
+          if(response == "success") {
+              Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'บันทึกข้อมูลสำเร็จ',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              setTimeout(() => {
+                window.location.href = '/exerTime.html';
+              }, 1500);
+          }else {
+            Swal.fire({
+              position: 'top-center',
+              icon: 'error',
+              title: 'บันทึกข้อมูลไม่สำเร็จ',
+              showConfirmButton: false,
+              timer: 1500
+            })
+            setTimeout(() => {
+              window.location.reload();
+            }, 1500);
+          }
         },
         error: function (response) {
           console.log(response);
